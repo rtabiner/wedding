@@ -1,0 +1,12 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poiret One', cursive;
+}
+
+a,
+a:link,
+a:visited {
+  color: #a8adab;
+  text-decoration: none;
+}
