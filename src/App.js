@@ -1,31 +1,24 @@
 import React, { PureComponent } from 'react';
 import './App.css';
-import * as emailjs from 'emailjs-com';
-import { Formik } from 'formik';
-import { Button, Tabs, Tab } from '@material-ui/core';
-import { withStyles, withTheme } from '@material-ui/core';
-import Rsvp from './Rsvp/Rspv';
+import Introduction from './Introduction/Introduction';
+import RSVP from './Rsvp/Rspv';
+import Navigation from './Layout/Navigation';
+import { Switch, Route} from 'react-router-dom';
 
 class App extends PureComponent {
-
   render() {
     return (
       <div className="App">
         <header className="App-header">
           <h1 className="App-title">Áine and Rob</h1>
         </header>
-        <div className="App-Nav">
-          <Tabs>
-            <Tab label="Travel + Accomodation" />
-            <Tab label="The Day" />
-            <Tab label="Things to do" />
-            <Tab label="RSVP" />
-            </Tabs>
-        </div>
+          <Navigation />
+        <div className="app-content">
 
-        <Rsvp />
-        <div className="rsvp-footer">
-          RSVP
+        <Switch>
+      <Route exact path='/' component={Introduction}/>
+      <Route path='/RSVP' component={RSVP}/>
+    </Switch>
         </div>
       </div>
     );

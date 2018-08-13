@@ -1,37 +1,28 @@
 .App {
   text-align: center;
-  max-width: 900px;
   margin: 0 auto;
+  padding-bottom: 20px;  
 }
 
 .App-header {
-  height: 60px;
-  padding: 20px;
-  color: #000;
+  height: 70px;
+  padding: 10px;
+  color: #6a6f6a;
 }
 
 .App-title { 
   font-size: 2em;
 }
 
-.App-Nav {
-  padding: 15px 0px;
-  border-bottom: 2px solid #94d7b7;  
-  border-top: 2px solid #94d7b7; 
-  font-size: large;
+.app-content {
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-.rsvp-footer {
-  font-size: 25px;
-  position: fixed;
-  bottom: 0;
-  height: 50px;
-  background-color: #94d7b7;
-  color: white;
-  width: 100%;
-  max-width: 900px;
-  text-align: center;
-  margin: auto;
-  line-height: 50px;
-  cursor: pointer;
+img {
+  max-width: 100%;
+}
+
+p {
+  text-align: justify;
 }
