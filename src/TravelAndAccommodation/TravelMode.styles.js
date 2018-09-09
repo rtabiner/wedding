@@ -1,13 +1,16 @@
 const styles = theme => ({
-    form: {
-        textAlign: 'left',
-        maxWidth: 400,
-        margin: '0 auto',
+    root: {
+        minWidth: '100%',
     },
-    cardActions: {
-        color: 'red',
+    cardContent: {
         textAlign: 'center',
-    }
+    },
+    icon: {
+        fill: '#94b8af', 
+        width: 60,
+        height: 60,
+        marginBottom: 10,
+    }        
 });    
 
 export default styles;

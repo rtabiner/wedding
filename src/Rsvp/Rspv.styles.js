@@ -4,7 +4,11 @@ const styles = theme => ({
         maxWidth: 700,
         margin: '0 auto',
     },
+    formLabel: {
+        marginBottom: 0,
+    },
     textField: {
+        marginTop: 5,
         width: '100%',
     },
     textAreaField: {
@@ -13,6 +17,9 @@ const styles = theme => ({
     },
     checkboxRoot: {
         color: '#94b8af',
+    },
+    selectList: {
+        width: '100%',
     },
 });    
 

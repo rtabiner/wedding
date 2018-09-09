@@ -2,7 +2,7 @@ import React, { PureComponent, Fragment } from 'react';
 import * as emailjs from 'emailjs-com';
 import { Formik } from 'formik';
 import { compose } from 'recompose';
-import { withStyles, withTheme, TextField,FormControlLabel, Checkbox, Fade, Button, Divider } from '@material-ui/core';
+import { withStyles, withTheme, TextField,FormControlLabel, Checkbox, Fade, Button, Collapse, Divider, FormControl, InputLabel, Select, MenuItem } from '@material-ui/core';
 import styles from './Rspv.styles';
 import PropTypes from 'prop-types';
 
@@ -56,6 +56,7 @@ render() {
       initialValues={{
         senderName: '',
         attending: false,
+        numberAttending: 0,
         hasDietryRequirements: false,
         extraInformation: '',
       }}
@@ -75,13 +76,13 @@ render() {
         isSubmitting,
       }) => (
         <form className={classes.container}>
+                <p className={classes.formLabel}>Your name(s):</p>
         <TextField
         name="senderName"
         id="senderName"
         onChange={handleChange}
             onBlur={handleBlur}
             value={values.email}
-        label="Name(s)"
           className={classes.textField}
           margin="normal"
         />
@@ -89,18 +90,40 @@ render() {
           <br />
 
           <FormControlLabel
-          control={
-            <Checkbox name="attending" id="attending"
-            onChange={handleChange}
-            classes={{
-                root: classes.checkboxRoot
-              }}
-            onBlur={handleBlur} />
-          }
-          label="Yes, we are able to make it!"
-        />
+        control={
+          <Checkbox name="attending" id="attending"
+          onChange={handleChange}
+          classes={{
+              root: classes.checkboxRoot
+            }}
+          onBlur={handleBlur} />
+        }
+        label="Yes, we are able to make it!"
+      /> 
 
+          <Collapse in={values.attending}>
+          
+          <div>
           <br />
+
+          <p>Number Attending:</p>
+
+            <Select
+            value={values.numberAttending}
+            onChange={handleChange}
+            className={classes.selectList}
+            inputProps={{
+              name: 'numberAttending',
+              id: 'numberAttending',
+            }}
+          >
+            <MenuItem value="">Please select</MenuItem>
+            <MenuItem value={1}>One</MenuItem>
+            <MenuItem value={2}>Two</MenuItem>
+            <MenuItem value={3}>Three</MenuItem>
+          </Select>
+         
+        <br />
           <br />
 
           <FormControlLabel
@@ -115,24 +138,24 @@ render() {
           label="Dietry requirements?"
         />
           <br />
-          <Fade timeout={800} in={values.hasDietryRequirements}>  
-            <p>Please provide any dietry requirements below.</p>          
-          </Fade>
+          <Collapse in={values.hasDietryRequirements}>
+          <p>Please provide any dietry requirements below.</p>          
+          </Collapse>
+        </div>
+        </Collapse>
+        <p>Additional Information:</p>
 
-          <TextField
+          <textarea
           id="extraInformation"
           name="extraInformation"
-          label="Additional information"
-          multiline
-          rowsMax="4"
           onChange={handleChange}
             onBlur={handleBlur}
             value={values.extraInformation}
           className={classes.textAreaField}
           margin="normal"
         />
-          <br />
-          <Button variant="contained" color="secondary" className={classes.button} onClick={handleSubmit}>
+        <br />
+        <Button variant="contained" color="secondary" disabled={isSubmitting}> className={classes.button} onClick={handleSubmit}>
           Submit
           </Button>
         </form>

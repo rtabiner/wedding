@@ -1,24 +1,42 @@
 import React, { PureComponent } from 'react';
 import { compose } from 'recompose';
 import { withStyles, withTheme, Card, CardContent, CardActions, Button, Typography } from '@material-ui/core';
+import TrainIcon from '@material-ui/icons/Train';
+import FlightIcon from '@material-ui/icons/FlightTakeoff';
+import BusIcon from '@material-ui/icons/DirectionsBus';
+import CarIcon from '@material-ui/icons/DirectionsCar';
 import styles from './TravelMode.styles';
 
 class TravelMode extends PureComponent {
     
+getTransportIcon(transportMode){
+    switch(transportMode){
+        case 'car':
+            return <CarIcon className={this.props.classes.icon} />
+        case 'bus':
+            return <BusIcon className={this.props.classes.icon} />
+        case 'train':
+            return <TrainIcon className={this.props.classes.icon} />
+        case 'flight':
+            return <FlightIcon className={this.props.classes.icon} />
+    }
+}
+
     render() {
-        const { classes } = this.props;
+        const { classes, transportMode, summary } = this.props;
         return(
-<Card>
+                        <a href={'#' + transportMode}>
+        <Card className={classes.root}>
         <CardContent>
-            {this.props.children}
-            <Typography paragraph>
-              stuff.  sdfijs jffj dsifo fiosdj fdsijiosdj fosdifoisdj fosidj foisdj foisdj oisdjfoisdj fosdfj
+            {this.getTransportIcon(transportMode)}
+            <Typography className={classes.cardContent} paragraph>
+              {summary}
             </Typography>
+           {this.props.cardText}
         </CardContent>
-        <CardActions classes={classes.cardActions}>
-          <a href="#car">{this.props.cardText}</a>
-        </CardActions>
       </Card>
+      </a>      
+
         );
     }
     }
