@@ -1,16 +1,18 @@
 import React, { PureComponent, Fragment } from 'react';
 import * as emailjs from 'emailjs-com';
-import { Formik } from 'formik';
+import { Formik, FieldArray } from 'formik';
 import { compose } from 'recompose';
-import { withStyles, withTheme, TextField,FormControlLabel, Checkbox, Fade, Button, Collapse, Divider, FormControl, InputLabel, Select, MenuItem } from '@material-ui/core';
+import { withStyles, withTheme, TextField,FormControlLabel, Checkbox, Fade, Button, Collapse, Divider, Radio, RadioGroup, FormControl, InputLabel, Select, MenuItem } from '@material-ui/core';
 import styles from './Rspv.styles';
 import PropTypes from 'prop-types';
+import * as Yup from 'yup';
 
 class Rsvp extends PureComponent {
 constructor(props){
   super(props);
 this.state = {
   formSubmitted: false,
+  attending: false,
 }
 }
     sendEmail(formData) {
@@ -27,6 +29,10 @@ this.state = {
 this.setState({formSubmitted: true});
 
 }
+
+handleChange = event => {
+  this.setState({ attending: event.target.value });
+};
 
 render() {
     const { classes } = this.props;
@@ -60,6 +66,24 @@ render() {
         hasDietryRequirements: false,
         extraInformation: '',
       }}
+      validationSchema={Yup.object().shape({
+        senderName: Yup.string()
+          .required('Required'),
+        attending: Yup.bool(),
+        hasDietryRequirements: Yup.bool(),
+        numberAttending: Yup.number().when('attending', {
+        is: true,
+        then: Yup.number()
+          .moreThan(0),
+        otherwise: Yup.number(),
+      }),
+      extraInformation: Yup.string().when('hasDietryRequirements', {
+          is: true,
+          then: Yup.string()
+          .required('Required'),
+          otherwise: Yup.string(),
+      })
+    })}
       onSubmit={(
         values,
         { setSubmitting }
@@ -74,6 +98,7 @@ render() {
         handleBlur,
         handleSubmit,
         isSubmitting,
+        isValid,
       }) => (
         <form className={classes.container}>
                 <p className={classes.formLabel}>Your name(s):</p>
@@ -89,18 +114,18 @@ render() {
           <br />
           <br />
 
-          <FormControlLabel
-        control={
-          <Checkbox name="attending" id="attending"
-          onChange={handleChange}
-          classes={{
-              root: classes.checkboxRoot
-            }}
-          onBlur={handleBlur} />
-        }
-        label="Yes, we are able to make it!"
-      /> 
-
+          <FieldArray>
+      <RadioGroup
+            name="attending"
+            id="attending"
+            className={classes.group}
+            onChange={handleChange}
+            value={values.attending}
+          >
+            <FormControlLabel value={true} control={<Radio />} label="Yes, we are able to make it!" />
+            <FormControlLabel value={false} control={<Radio />} label="Sorry, we won't be able to make it" />
+          </RadioGroup>
+</FieldArray>
           <Collapse in={values.attending}>
           
           <div>
@@ -117,7 +142,7 @@ render() {
               id: 'numberAttending',
             }}
           >
-            <MenuItem value="">Please select</MenuItem>
+            <MenuItem value={0}>Please select</MenuItem>
             <MenuItem value={1}>One</MenuItem>
             <MenuItem value={2}>Two</MenuItem>
             <MenuItem value={3}>Three</MenuItem>
@@ -155,7 +180,7 @@ render() {
           margin="normal"
         />
         <br />
-        <Button variant="contained" color="secondary" disabled={isSubmitting}> className={classes.button} onClick={handleSubmit}>
+        <Button variant="contained" color="secondary" disabled={!isValid} className={classes.button} onClick={handleSubmit}>
           Submit
           </Button>
         </form>
