@@ -2,21 +2,38 @@
   text-align: center;
   margin: 0 auto;
   padding-bottom: 20px;  
+  background-color: #f8f8f8;
+  padding: 0 10px;
 }
 
 .App-header {
   height: 70px;
-  padding: 10px;
+  padding: 20px 10px 10px 10px;
   color: #6a6f6a;
+  display: flex;
+  justify-content: center;
+  margin: 0 -10px 0 -10px;
 }
 
-.App-title { 
-  font-size: 2em;
+.titleImage {
+  height: 55px;
+  padding: 0 20px;
 }
+
+.App-title {
+  font-size: 3em;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;}
 
 .app-content {
   max-width: 1000px;
-  margin: 0 auto;
+  margin: 20px auto 0px auto;
+  padding: 20px;
+  border: 10px solid #c3d7d2;
+  background-color: #fff;
 }
 
 img {

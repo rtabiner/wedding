@@ -7,9 +7,9 @@ import { theme } from './Style/Theme';
 import { BrowserRouter } from 'react-router-dom'
 
 ReactDOM.render(
-    <BrowserRouter>    
-    <MuiThemeProvider theme={theme}>    
+    <MuiThemeProvider theme={theme}>  
+        <BrowserRouter>      
         <App />
+        </BrowserRouter>
     </MuiThemeProvider>
-    </BrowserRouter>
 , document.getElementById('root'));
