@@ -1,6 +1,6 @@
 import React, { PureComponent, Fragment } from 'react';
 import * as emailjs from 'emailjs-com';
-import { Formik, FieldArray } from 'formik';
+import { Formik } from 'formik';
 import { compose } from 'recompose';
 import { withStyles, withTheme, TextField,FormControlLabel, Checkbox, Fade, Button, Collapse, Divider, Radio, RadioGroup, FormControl, InputLabel, Select, MenuItem } from '@material-ui/core';
 import styles from './Rspv.styles';
@@ -26,13 +26,12 @@ this.state = {
 //     console.log('FAILED...', error);
 //  });
 
-this.setState({formSubmitted: true});
+this.setState({
+  formSubmitted: true,
+  attending: formData.attending,
+});
 
 }
-
-handleChange = event => {
-  this.setState({ attending: event.target.value });
-};
 
 render() {
     const { classes } = this.props;
@@ -42,17 +41,26 @@ render() {
 
 {this.state.formSubmitted &&
         <Fade timeout={1000} in={this.state.formSubmitted}> 
-        <div className={classes.form}>
-        <p>Thanks or submitting your response!</p>
-        </div>
+        <div className={classes.formSuccess}>
+        <h3>Thanks or submitting your response!</h3>
+          {this.state.attending &&
+          <div>
+            <p className={classes.successSummary}>We've let Rob and Áine know that you're able to make it :)</p>
+            <p className={classes.successSummary}>Looking forward to seeing you soon!</p>
+            </div>
+          }
+          {!this.state.attending &&
+            <p className={classes.successSummary}>We've let Rob and Áine know that unfortunately you're not able to make it.</p>
+          }
+                      </div>
     </Fade>
 }
 {!this.state.formSubmitted &&
 
     <Fade timeout={800} in={!this.state.formSubmitted}>  
     <div className={classes.form}>
-
-    <p>Please use the form below to let us know if you are able to join us celbrate our special day.</p>
+  <br />
+    <p>Please use the form below to let us know if you are able to celebrate our special day with us.</p>
     <br />
     <Divider />
     <p><b>Please note:</b> we would love to give all our guests the opportunity to let their hair down and have a good time without having to worry about little eyes and ears so we politely request no children other than immediate family.</p>
@@ -61,7 +69,7 @@ render() {
     <Formik
       initialValues={{
         senderName: '',
-        attending: false,
+        attending: true,
         numberAttending: 0,
         hasDietryRequirements: false,
         extraInformation: '',
@@ -99,6 +107,7 @@ render() {
         handleSubmit,
         isSubmitting,
         isValid,
+        setFieldValue,
       }) => (
         <form className={classes.container}>
                 <p className={classes.formLabel}>Your name(s):</p>
@@ -114,18 +123,28 @@ render() {
           <br />
           <br />
 
-          <FieldArray>
-      <RadioGroup
+          <RadioGroup
             name="attending"
             id="attending"
             className={classes.group}
-            onChange={handleChange}
-            value={values.attending}
+            value={values.attending.toString()}            
           >
-            <FormControlLabel value={true} control={<Radio />} label="Yes, we are able to make it!" />
-            <FormControlLabel value={false} control={<Radio />} label="Sorry, we won't be able to make it" />
+            <FormControlLabel control={
+            <Radio 
+            checked={values.attending}
+            onChange={() => {
+                setFieldValue('attending', true)
+              }} />
+            } label="Yes, we are able to make it!" />
+            <FormControlLabel control={
+            <Radio 
+            checked={!values.attending}
+            onChange={() => {
+                setFieldValue('attending', false)
+              }} />
+            } label="Sorry, we won't be able to make it" />
           </RadioGroup>
-</FieldArray>
+
           <Collapse in={values.attending}>
           
           <div>
@@ -170,6 +189,7 @@ render() {
         </Collapse>
         <p>Additional Information:</p>
 
+          <div className={classes.textArea}>
           <textarea
           id="extraInformation"
           name="extraInformation"
@@ -179,13 +199,17 @@ render() {
           className={classes.textAreaField}
           margin="normal"
         />
+        </div>
         <br />
-        <Button variant="contained" color="secondary" disabled={!isValid} className={classes.button} onClick={handleSubmit}>
+        <div className={classes.formButtons}>
+        <Button variant="outlined" color="primary" disabled={!isValid} className={!isValid ? classes.disabledButton : classes.button} onClick={handleSubmit}>
           Submit
           </Button>
+          </div>
         </form>
       )}
     />
+    <br />
     </div>
     </Fade>}
     </div>
