@@ -26,15 +26,13 @@ getTransportIcon(transportMode){
         const { classes, transportMode, summary } = this.props;
         return(
                         <a href={'#' + transportMode}>
-        <Card className={classes.root}>
-        <CardContent>
+        <div className={classes.root}>
             {this.getTransportIcon(transportMode)}
             <Typography className={classes.cardContent} paragraph>
               {summary}
             </Typography>
            {this.props.cardText}
-        </CardContent>
-      </Card>
+        </div>
       </a>      
 
         );

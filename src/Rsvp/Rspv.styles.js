@@ -31,6 +31,7 @@ const styles = theme => ({
         fontSize: 15,
         fontFamily: 'Poiret One',
         padding: 10,
+        border: '1px #6a6f6a solid',
     },
     checkboxRoot: {
         color: '#94b8af',

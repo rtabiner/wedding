@@ -59,7 +59,6 @@ render() {
 
     <Fade timeout={800} in={!this.state.formSubmitted}>  
     <div className={classes.form}>
-  <br />
     <p>Please use the form below to let us know if you are able to celebrate our special day with us.</p>
     <br />
     <Divider />
