@@ -1,24 +1,26 @@
 import React, { PureComponent } from 'react';
 import { compose } from 'recompose';
-import { withStyles, withTheme, Fade, Grid } from '@material-ui/core';
-import styles from './Introduction.styles';
+import {
+  withStyles,
+  withTheme,
+  Fade,
+} from '@material-ui/core';
 import PropTypes from 'prop-types';
-import intro1 from '../Images/sizergh-min.jpg' 
+import styles from './Introduction.styles';
 
 class Introduction extends PureComponent {
-
-render() {
+  render() {
     const { classes } = this.props;
     return (
       <Fade timeout={800} in>
-      <div>
-        <h1>Intro..</h1>
-        <p>hi</p>
-        <p>hi</p>
+        <div>
+          <h1>Intro..</h1>
+          <p>hi</p>
+          <p>hi</p>
         </div>
       </Fade>
     );
-}
+  }
 }
 
 Introduction.propTypes = {
