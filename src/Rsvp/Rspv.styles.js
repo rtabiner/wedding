@@ -60,7 +60,10 @@ const styles = theme => ({
     marginBottom: 20,
   },
   dietryRequirements: {
-    marginBottom: 10,
+    marginBottom: 6,
+  },
+  additonalInfoSection: {
+    marginTop: 12,
   },
 });
 

@@ -10,6 +10,13 @@ body {
 a,
 a:link,
 a:visited {
-  color: #a8adab;
+  color: #94b8af;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+a.plain-link,
+a.plain-link:link,
+a.plain-link:visited {
   text-decoration: none;
 }

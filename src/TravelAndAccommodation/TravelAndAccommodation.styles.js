@@ -14,6 +14,9 @@ const styles = theme => ({
   transportSection: {
     marginBottom: 40,
   },
+  noteDivider: {
+    marginBottom: 20,
+  },
 });
 
 export default styles;

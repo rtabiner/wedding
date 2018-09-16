@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 import { compose } from 'recompose';
 import { withStyles, withTheme, Typography } from '@material-ui/core';
+import { Link } from 'react-scroll';
 import TrainIcon from '@material-ui/icons/Train';
 import FlightIcon from '@material-ui/icons/FlightTakeoff';
 import BusIcon from '@material-ui/icons/DirectionsBus';
@@ -24,14 +25,14 @@ class TravelMode extends PureComponent {
   render() {
     const { classes, transportMode, cardText } = this.props;
     return (
-      <a href={`#${transportMode}`}>
+      <Link to={transportMode} spy smooth offset={-20} duration={700} className="plain-link">
         <div className={classes.root}>
           {this.getTransportIcon(transportMode)}
           <Typography className={classes.cardContent}>
             {cardText}
           </Typography>
         </div>
-      </a>
+      </Link>
 
     );
   }

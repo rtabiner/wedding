@@ -8,6 +8,7 @@ const styles = theme => ({
     '&:hover': {
       background: '#94b8af1a',
     },
+    cursor: 'pointer',
   },
   cardContent: {
     textAlign: 'center',

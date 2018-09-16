@@ -24,9 +24,9 @@ render() {
   return(
     <div className={classes.navigationSection}>
     <div className={classes.navigationTabs}>
-    <Link to='/'><span className={location.pathname == '/' ? classes.activeTabLabel : classes.tabLabel}>The Day</span></Link>
+    <Link className="plain-link" to='/'><span className={location.pathname == '/' ? classes.activeTabLabel : classes.tabLabel}>The Day</span></Link>
     &nbsp; &middot; &nbsp;
-    <Link to='/TravelAndAccommodation'>
+    <Link className="plain-link" to='/TravelAndAccommodation'>
         <Fragment>
           <Hidden smUp>
             <span className={location.pathname == '/TravelAndAccommodation' ? classes.activeTabLabel : classes.tabLabel}>Travel</span>
@@ -37,9 +37,9 @@ render() {
           </Fragment> 
       </Link>
       &nbsp; &middot; &nbsp;
-    <Link to='/ThingsToDo'><span className={location.pathname == '/ThingsToDo' ? classes.activeTabLabel : classes.tabLabel}>Things To Do</span></Link>
+    <Link className="plain-link" to='/ThingsToDo'><span className={location.pathname == '/ThingsToDo' ? classes.activeTabLabel : classes.tabLabel}>Things To Do</span></Link>
     &nbsp; &middot; &nbsp;
-    <Link to='/RSVP'><span className={location.pathname == '/RSVP' ? classes.activeTabLabel : classes.tabLabel}>RSVP</span></Link>
+    <Link className="plain-link" to='/RSVP'><span className={location.pathname == '/RSVP' ? classes.activeTabLabel : classes.tabLabel}>RSVP</span></Link>
         </div>
     </div>
   );
