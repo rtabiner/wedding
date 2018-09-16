@@ -38,6 +38,7 @@ const styles = theme => ({
   },
   selectList: {
     width: '100%',
+    color: theme.palette.colors.darkGrey,
   },
   textArea: {
     paddingRight: 22,
@@ -54,6 +55,12 @@ const styles = theme => ({
     borderColor: '#6a6f6a',
     cursor: 'not-allowed !important',
     pointerEvents: 'all !important',
+  },
+  noteDivider: {
+    marginBottom: 20,
+  },
+  dietryRequirements: {
+    marginBottom: 10,
   },
 });
 

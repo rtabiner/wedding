@@ -16,21 +16,20 @@ class TravelMode extends PureComponent {
         return <BusIcon className={this.props.classes.icon} />;
       case 'train':
         return <TrainIcon className={this.props.classes.icon} />;
-      case 'flight':
+      case 'air':
         return <FlightIcon className={this.props.classes.icon} />;
     }
   }
 
   render() {
-    const { classes, transportMode, summary } = this.props;
+    const { classes, transportMode, cardText } = this.props;
     return (
       <a href={`#${transportMode}`}>
         <div className={classes.root}>
           {this.getTransportIcon(transportMode)}
-          <Typography className={classes.cardContent} paragraph>
-                {summary}
-              </Typography>
-          {this.props.cardText}
+          <Typography className={classes.cardContent}>
+            {cardText}
+          </Typography>
         </div>
       </a>
 

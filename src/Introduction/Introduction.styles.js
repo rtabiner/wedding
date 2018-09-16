@@ -1,11 +1,9 @@
 const styles = theme => ({
-  form: {
-    textAlign: 'left',
-    maxWidth: 400,
-    margin: '0 auto',
+  schedule: {
+    paddingTop: 50,
   },
-  textField: {
-    width: '100%',
+  scheduleDivider: {
+    marginBottom: 50,
   },
 });
 

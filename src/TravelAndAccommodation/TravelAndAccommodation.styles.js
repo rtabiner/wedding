@@ -7,6 +7,13 @@ const styles = theme => ({
   textField: {
     width: '100%',
   },
+  transportButtons: {
+    marginTop: 30,
+    marginBottom: 40,
+  },
+  transportSection: {
+    marginBottom: 40,
+  },
 });
 
 export default styles;

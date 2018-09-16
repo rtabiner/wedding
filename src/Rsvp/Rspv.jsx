@@ -21,6 +21,8 @@ import {
 import PropTypes from 'prop-types';
 import * as Yup from 'yup';
 import styles from './Rspv.styles';
+import Header from '../Shared/PageElements/Header';
+import Text from '../Shared/PageElements/Text';
 
 class Rsvp extends PureComponent {
   constructor(props) {
@@ -50,7 +52,7 @@ class Rsvp extends PureComponent {
     const { formSubmitted, attending } = this.state;
     return (
       <div>
-        <h1>RSVP</h1>
+        <Header>RSVP</Header>
 
         {formSubmitted
           && (
@@ -83,20 +85,19 @@ class Rsvp extends PureComponent {
           && (
             <Fade timeout={800} in={!formSubmitted}>
               <div className={classes.form}>
-                <Typography paragraph>
+                <Text>
                   Please use the form below to let us know if you are able to
                   celebrate our special day with us.
-                </Typography>
-                <br />
-                <Divider />
-                <Typography paragraph>
+                </Text>
+                <Divider className={classes.noteDivider} />
+                <Text>
                   <b>Please note:</b>
                   {' '}
                   we would love to give all our guests the opportunity to let their
                   hair down and have a good time without having to worry about little
                   eyes and ears so we politely request no children other than immediate family.
-                </Typography>
-                <Divider />
+                </Text>
+                <Divider className={classes.noteDivider} />
                 <br />
                 <Formik
                   initialValues={{
@@ -138,7 +139,7 @@ class Rsvp extends PureComponent {
                     setFieldValue,
                   }) => (
                     <form className={classes.container}>
-                      <p className={classes.formLabel}>Your name(s):</p>
+                      <Text marginBottom={0}>Your name(s):</Text>
                       <TextField
                         name="senderName"
                         id="senderName"
@@ -185,7 +186,7 @@ class Rsvp extends PureComponent {
                         <div>
                           <br />
 
-                          <p>Number Attending:</p>
+                          <Text marginBottom={10}>Number Attending:</Text>
 
                           <Select
                             value={values.numberAttending}
@@ -206,6 +207,7 @@ class Rsvp extends PureComponent {
                           <br />
 
                           <FormControlLabel
+                            className={classes.dietryRequirements}
                             control={(
                               <Checkbox
                                 name="hasDietryRequirements"
@@ -213,6 +215,9 @@ class Rsvp extends PureComponent {
                                 onChange={handleChange}
                                 classes={{
                                   root: classes.checkboxRoot,
+                                  label: {
+                                    textTransform: 'capitalize',
+                                  },
                                 }}
                                 onBlur={handleBlur}
                               />
@@ -221,11 +226,11 @@ class Rsvp extends PureComponent {
                           />
                           <br />
                           <Collapse in={values.hasDietryRequirements}>
-                            <p>Please provide any dietry requirements below.</p>
+                            <Text>Please provide any dietry requirements below.</Text>
                           </Collapse>
                         </div>
                       </Collapse>
-                      <p>Additional Information:</p>
+                      <Text marginBottom={10}>Additional Information:</Text>
 
                       <div className={classes.textArea}>
                         <textarea

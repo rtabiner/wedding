@@ -29,9 +29,9 @@
   align-items: center;}
 
 .app-content {
-  max-width: 1000px;
+  max-width: 960px;
   margin: 20px auto 0px auto;
-  padding: 20px;
+  padding: 40px;
   border: 10px solid #c3d7d2;
   background-color: #fff;
 }

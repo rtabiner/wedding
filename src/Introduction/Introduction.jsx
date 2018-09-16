@@ -4,9 +4,12 @@ import {
   withStyles,
   withTheme,
   Fade,
+  Divider,
 } from '@material-ui/core';
 import PropTypes from 'prop-types';
 import styles from './Introduction.styles';
+import Header from '../Shared/PageElements/Header';
+import Text from '../Shared/PageElements/Text';
 
 class Introduction extends PureComponent {
   render() {
@@ -14,9 +17,22 @@ class Introduction extends PureComponent {
     return (
       <Fade timeout={800} in>
         <div>
-          <h1>Intro..</h1>
-          <p>hi</p>
-          <p>hi</p>
+          <Header>Welcome</Header>
+          <Text>
+            We&apos;re super excited to welcome you to our wedding in Áine&apos;s home town,
+            and wonderful corner of the world. On these pages, you can find details of the wedding,
+            as well as details on the local area, but we&apos;re also happy to help if you have any
+            other burning questions by contacting us at:&nbsp;
+            <a href="mailto:rob@tabiner.net">rob@tabiner.net</a>
+            .
+          </Text>
+          <div className={classes.schedule}>
+            <Divider className={classes.scheduleDivider} />
+            <Header>Schedule</Header>
+            <Text>
+              More text...
+            </Text>
+          </div>
         </div>
       </Fade>
     );

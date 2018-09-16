@@ -1,4 +1,5 @@
 import React, { PureComponent, Fragment } from 'react';
+import Header from '../Shared/PageElements/Header';
 
 class HeadedSection extends PureComponent {
   render() {
@@ -6,8 +7,8 @@ class HeadedSection extends PureComponent {
     return (
       <Fragment>
         <a name={anchor} />
-        <h2>{header}</h2>
-        {this.props.children}
+          <Header>{header}</Header>
+          {this.props.children}
       </Fragment>
     );
   }
