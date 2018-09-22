@@ -31,7 +31,7 @@ class TravelAndAccommodation extends PureComponent {
           <Text>
             <b>Please note:</b>
             {' '}
-            we will be putting on transport from Durrow to Kilkenny (and back!) on the day of the
+            we will be putting on transport to and from the church from Durrow on the day of the
             wedding. Just let us know in the RSVP section if you would like to take advantage of
             this!
           </Text>
@@ -77,7 +77,7 @@ class TravelAndAccommodation extends PureComponent {
               <Text>
                 St. Canice&apos;s Church has plenty of room for parking, as do all of the
                 recommended places to stay in the accomodation page.
-                The distance between the St. Canice&apos;s Church and the reception at
+                The distance between St. Canice&apos;s Church and the reception at
                 Castle Durrow is about a 25 minute drive (26km / 16 miles).
               </Text>
               <Text>
@@ -100,7 +100,7 @@ class TravelAndAccommodation extends PureComponent {
               </Text>
               <Text>
                 Unfortunately, Durrow is only a small village and is only supported by
-                the local bus service, or by booking a taxi from Kilkenny.
+                a local bus service, or by booking a taxi from Kilkenny.
               </Text>
             </div>
           </HeadedSection>
