@@ -26,13 +26,13 @@ class Introduction extends PureComponent {
       <Fragment>
       {this.dividerLine()}
       <Grid item xs={2} sm={2}>
-      {time}
+      <Text>{time}</Text>
     </Grid>
     <Grid item xs={4} sm={4}>
-      {location}
+    <Text>{location}</Text>
     </Grid>
     <Grid item xs={6} sm={6}>
-      {summary}
+    <Text>{summary}</Text>
     </Grid>
     </Fragment>
       );
@@ -60,19 +60,25 @@ class Introduction extends PureComponent {
               {this.scheduleBlock(
                 '1pm',
                 "St. Canice's Church",
-                "The day starts in Kilkenny in Áine's local church. The ceremony begins at 1pm, so please arrive by 12.30. For those travelling from Durrow, we will provide a bus, which will be leaving at 12."
+                "Please join us for our Wedding Ceremony at St. Canice's Church, Kilkenny. St. Canice's is Áine's local church. Please arrive at 12.30pm for a 1pm start, you don't want to be later than the Bride (and Áine is never late)! For those travelling from Durrow, we will provide a bus, which will be leaving at 12 (please let us know on the RSVP if you would like to take advantage of this)."
               )}
               {this.scheduleBlock(
                 '3pm',
                 "Castle Durrow",
-                'Join us for drinks, dinner and dancing at Castle Durrow.'
+                "Whoooooo we are married (hopefully). The reception begins at 3pm at Catle Durrow, a place that is very special to us both! At this point you will have earned your pint of Guinness - enjoy!"
               )}
               {this.scheduleBlock(
+                '9pm',
+                "Dancefloor",
+                'Time to show us your best moves.'
+              )}
+                 {this.scheduleBlock(
                 '2am',
-                "Home",
-                'Game over.'
+                "Hometime",
+                "All good things must come to an end (unless you're heading to the residents bar winky face)"
               )}
               {this.dividerLine()}
+          
             </Grid>
 
           </div>
