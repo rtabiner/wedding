@@ -1,41 +1,35 @@
-import React, { PureComponent, Fragment } from 'react';
-import { compose } from 'recompose';
-import {
-  withStyles,
-  withTheme,
-  Fade,
-  Divider,
-  Grid
-} from '@material-ui/core';
-import PropTypes from 'prop-types';
-import styles from './Introduction.styles';
-import Header from '../Shared/PageElements/Header';
-import Text from '../Shared/PageElements/Text';
+import React, { PureComponent, Fragment } from "react";
+import { compose } from "recompose";
+import { withStyles, withTheme, Fade, Divider, Grid } from "@material-ui/core";
+import PropTypes from "prop-types";
+import styles from "./Introduction.styles";
+import Header from "../Shared/PageElements/Header";
+import Text from "../Shared/PageElements/Text";
 
 class Introduction extends PureComponent {
   dividerLine() {
-    return(
+    return (
       <Grid item xs={12}>
-      <Divider />
-    </Grid>
+        <Divider />
+      </Grid>
     );
   }
 
   scheduleBlock(time, location, summary) {
-    return(
+    return (
       <Fragment>
-      {this.dividerLine()}
-      <Grid item xs={2} sm={2}>
-      <Text>{time}</Text>
-    </Grid>
-    <Grid item xs={4} sm={4}>
-    <Text>{location}</Text>
-    </Grid>
-    <Grid item xs={6} sm={6}>
-    <Text>{summary}</Text>
-    </Grid>
-    </Fragment>
-      );
+        {this.dividerLine()}
+        <Grid item xs={2} sm={2}>
+          <Text>{time}</Text>
+        </Grid>
+        <Grid item xs={4} sm={4}>
+          <Text>{location}</Text>
+        </Grid>
+        <Grid item xs={6} sm={6}>
+          <Text>{summary}</Text>
+        </Grid>
+      </Fragment>
+    );
   }
 
   render() {
@@ -44,43 +38,54 @@ class Introduction extends PureComponent {
       <Fade timeout={800} in>
         <div>
           <Header>Welcome</Header>
-          <Text>
-            We&apos;re super excited to welcome you to our wedding in Áine&apos;s home town,
-            Kilkenny. On these pages, you can find details of the wedding,
-            as well as details on the local area. We&apos;re also happy to help answer any
+          <Text marginBottom={10}>
+            We&apos;re super excited to welcome you to our wedding in
+            Áine&apos;s home town, Kilkenny. Located in Ireland&apos;s
+            &apos;sunny&apos; south east, the &apos;Marble City&apos; is a great
+            spot to spend a few days soaking up Irish culture.
+          </Text>
+          <Text marginBottom={10}>
+            After the wedding ceremony in Kilkenny, we will head to Durrow, to
+            kick start our married life with our nearest and dearest in this
+            special village.
+          </Text>
+          <Text marginBottom={10}>
+            On these pages, you can find details of the wedding, as well as
+            details on the local area. We&apos;re also happy to help answer any
             further questions over email by contacting us at:&nbsp;
-            <a href="mailto:rob@tabiner.net">rob@tabiner.net</a>
-            .
+            <a href="mailto:rob@tabiner.net">rob@tabiner.net</a>.
+          </Text>
+          <Text>
+            We can't wait to welcome you to this lovely part of the world to
+            celebrate our special day.
           </Text>
           <div className={classes.schedule}>
             <Divider className={classes.scheduleDivider} />
             <Header>Schedule</Header>
-            
+
             <Grid container spacing={24}>
               {this.scheduleBlock(
-                '1pm',
+                "1pm",
                 "St. Canice's Church",
                 "Please join us for our Wedding Ceremony at St. Canice's Church, Kilkenny. St. Canice's is Áine's local church. Please arrive at 12.30pm for a 1pm start, you don't want to be later than the Bride (and Áine is never late)! For those travelling from Durrow, we will provide a bus, which will be leaving at 12 (please let us know on the RSVP if you would like to take advantage of this)."
               )}
               {this.scheduleBlock(
-                '3pm',
+                "3pm",
                 "Castle Durrow",
                 "Whoooooo we are married (hopefully). The reception begins at 3pm at Catle Durrow, a place that is very special to us both! At this point you will have earned your pint of Guinness - enjoy!"
               )}
               {this.scheduleBlock(
-                '9pm',
+                "9pm",
                 "Dancefloor",
-                'Time to show us your best moves.'
+                "Time to show us your best moves."
               )}
-                 {this.scheduleBlock(
-                '2am',
+              {this.scheduleBlock(
+                "2am",
                 "Hometime",
                 "All good things must come to an end (unless you're heading to the residents bar winky face)"
               )}
               {this.dividerLine()}
-          
             </Grid>
-
           </div>
         </div>
       </Fade>
@@ -89,7 +94,10 @@ class Introduction extends PureComponent {
 }
 
 Introduction.propTypes = {
-  classes: PropTypes.object.isRequired, // eslint-disable-line
+  classes: PropTypes.object.isRequired // eslint-disable-line
 };
 
-export default compose(withStyles(styles), withTheme())(Introduction);
+export default compose(
+  withStyles(styles),
+  withTheme()
+)(Introduction);

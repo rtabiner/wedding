@@ -26,18 +26,18 @@ render() {
     <div className={classes.navigationTabs}>
     <Link className="plain-link" to='/'><span className={location.pathname == '/' ? classes.activeTabLabel : classes.tabLabel}>The Day</span></Link>
     &nbsp; &middot; &nbsp;
-    <Link className="plain-link" to='/TravelAndAccommodation'>
+    <Link className="plain-link" to='/Travel'>
         <Fragment>
           <Hidden smUp>
-            <span className={location.pathname == '/TravelAndAccommodation' ? classes.activeTabLabel : classes.tabLabel}>Travel</span>
+            <span className={location.pathname == '/Travel' ? classes.activeTabLabel : classes.tabLabel}>Travel</span>
           </Hidden>
           <Hidden xsDown>
-            <span className={location.pathname == '/TravelAndAccommodation' ? classes.activeTabLabel : classes.tabLabel}>Travel + Accommodation</span>
+            <span className={location.pathname == '/Travel' ? classes.activeTabLabel : classes.tabLabel}>Travel</span>
           </Hidden>
           </Fragment> 
       </Link>
       &nbsp; &middot; &nbsp;
-    <Link className="plain-link" to='/ThingsToDo'><span className={location.pathname == '/ThingsToDo' ? classes.activeTabLabel : classes.tabLabel}>Things To Do</span></Link>
+    <Link className="plain-link" to='/Accommodation'><span className={location.pathname == '/Accommodation' ? classes.activeTabLabel : classes.tabLabel}>Accommodation</span></Link>
     &nbsp; &middot; &nbsp;
     <Link className="plain-link" to='/RSVP'><span className={location.pathname == '/RSVP' ? classes.activeTabLabel : classes.tabLabel}>RSVP</span></Link>
         </div>

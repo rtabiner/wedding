@@ -7,9 +7,8 @@ import {
   Grid,
   Divider,
 } from '@material-ui/core';
-import { Link } from 'react-scroll';
 import PropTypes from 'prop-types';
-import styles from './TravelAndAccommodation.styles';
+import styles from './Travel.styles';
 import TravelMode from './TravelMode';
 import HeadedSection from '../Shared/HeadedSection';
 import Header from '../Shared/PageElements/Header';
@@ -21,7 +20,7 @@ class TravelAndAccommodation extends PureComponent {
     return (
       <Fade in timeout={800}>
         <div>
-          <Header>Travel and Accommodation</Header>
+          <Header>Travel</Header>
           <Text>
             Here you can find out more information about getting to and from Kilkenny and Durrow,
             as well as some local accomodation. Use the buttons to help jump to the
@@ -84,7 +83,11 @@ class TravelAndAccommodation extends PureComponent {
                 <b>Car Hire</b>
                 <br />
                 If you are flying to Ireland and would like to hire a car, you will find the widest
-                range and the cheapest options at Dublin Airport.
+                range and the cheapest options at Dublin Airport. We tend to use
+                {' '}
+                <a href="https://www.skyscanner.net/carhire" target="_blank" rel="noopener noreferrer">SkyScanner</a>
+                (yes, they do car hire too!) to find the best deal, and book well in
+                advance to ensure the best price.
               </Text>
             </div>
           </HeadedSection>
@@ -108,39 +111,23 @@ class TravelAndAccommodation extends PureComponent {
           <HeadedSection header="Travel - by bus" anchor="bus">
             <div className={classes.transportSection}>
               <Text>
-                <b>Dublin Airport to Durrow</b>
+                <b>Dublin to Kilkenny</b>
                 <br />
-                Moo
-              </Text>
-              <Text>
-                <b>Dublin to Durrow</b>
-                <br />
-                Moo
-              </Text>
-              <Text>
-                <b>Dublin Airport to Kilkenny</b>
-                <br />
-                There is a regular bus service that runs between Dublin Airport
-                and Kilkenny and takes about 2 hours 20 minutes. You can book a ticket
+                There is a regular bus service that runs between Dublin Airport / city
+                centre and Kilkenny. You can book a ticket
                 {' '}
                 <a target="_blank" rel="noopener noreferrer" href="https://jjkavanagh.ie/">here</a>
                 .
               </Text>
               <Text>
-                <b>Dublin to Kilkenny</b>
+                <b>Dublin to Durrow</b>
                 <br />
-                Unfortunately, there is no direct bus from Dublin, so we would recommend travelling
-                via train. You can find out more information
+                Unfortunately getting to Durrow via bus is not as straight-forward. You will need
+                to get a bus to Portlaoise and then jump on a local service to Durrow. You can
+                book a ticket
                 {' '}
-                <Link to="train" spy smooth offset={-20} duration={700}>
-                  <span>here</span>
-                </Link>
+                <a target="_blank" rel="noopener noreferrer" href="https://www.dublincoach.ie/">here</a>
                 .
-              </Text>
-              <Text>
-                <b>Travelling between Kilkenny and Durrow</b>
-                <br />
-                Taxis
               </Text>
             </div>
           </HeadedSection>

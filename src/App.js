@@ -3,8 +3,8 @@ import './App.css';
 import { Fade } from '@material-ui/core';
 import { Switch, Route } from 'react-router-dom';
 import Introduction from './Introduction/Introduction';
-import ThingsToDo from './ThingsToDo/ThingsToDo';
-import TravelAndAccommodation from './TravelAndAccommodation/TravelAndAccommodation';
+import Accommodation from './Accommodation/Accommodation';
+import Travel from './Travel/Travel';
 import RSVP from './Rsvp/Rspv';
 import Navigation from './Layout/Navigation';
 import ring_logo from './Images/ring_logo.png';
@@ -23,8 +23,8 @@ const App = () => (
 
       <Switch>
         <Route exact path="/" component={Introduction} />
-        <Route path="/TravelAndAccommodation" component={TravelAndAccommodation} />
-        <Route path="/ThingsToDo" component={ThingsToDo} />
+        <Route path="/Travel" component={Travel} />
+        <Route path="/Accommodation" component={Accommodation} />
         <Route path="/RSVP" component={RSVP} />
       </Switch>
 
