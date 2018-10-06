@@ -58,7 +58,9 @@ class Rsvp extends PureComponent {
           && (
             <Fade timeout={1000} in={formSubmitted}>
               <div className={classes.formSuccess}>
-                <h3>Thanks or submitting your response</h3>
+                <img className={classes.submitImage} src="https://lh3.googleusercontent.com/e70B8-iPwVUJ_WGdFJfUJfY7s9wO0MHOpEX9ltUAAUssrLWgX2WSl_YvNTrulAZGApKwKimtyPrtKExUZH-8hnN-Dw3i5jIhtAZtu6KhN5NK_whbcucB6WWzrNEAP8SsUtV5K5p6dCYtZ5mpNZyb_tLPETfTruwiPSlJ8mZLMmyFvzE1TOOnKX70x9gvnoZ7b0k0Vymo_-zDmFmsIbGx0rs7UC9LYSm_lXywxxPWGvtpyF5lAh9GZrTX6Dh9-WjeN96v1pnKSHT-GykIrMOtYgfS1g3hBr05Iwe5KOE97r2sXShlikjQXOqbDXlclfbXtoqGY7eL1a3QH86e8NlJzR4IHKMkO1kP3bjabFZAGZ_acA8TuFN19a1zMc1X81SxbfCvtSsRX_4AyYvWJ3q0T3H-X7eiwpth31TOioXC5xzo6cqHaSyadcZnJ8NOpu48KGXy9YWqxD5l7Oq1Qha24ZoLxmFKWkpEgtmJVPZznWjQyMSo4i7ThSAPOfhDnQPeYVuWissgaXPR_rGkXJB1DxA8wRga5lfDsBZ3wwmpoa0bqNn_RdZrsrtNg0gq_NCSkWTnfED_a77ya0ZE3CABU_wlkCrJnXeEC50U8utAkzEj3bPlGonLSfYk6GRfv0b3fKdZftYiI9uZtgI4CIUfoEKI_MgvNhfoQv5wgikFfYjUR1kIMT83TwXu=w2049-h1537-no" />
+                <br /><br />
+                <h3>Thanks or submitting your response.</h3>
                 {attending && (
                   <div>
                     <Typography paragraph className={classes.successSummary}>
@@ -85,15 +87,15 @@ class Rsvp extends PureComponent {
                   Please use the form below to let us know if you are able to
                   celebrate our special day with us.
                 </Text>
-                <Divider className={classes.noteDivider} />
-                <Text>
+                <div className={classes.pleaseNote}>
+                <Text marginBottom={0}>
                   <b>Please note:</b>
                   {' '}
                   we would love to give all our guests the opportunity to let their
                   hair down and have a good time without having to worry about little
                   eyes and ears so we politely request no children other than immediate family.
                 </Text>
-                <Divider className={classes.noteDivider} />
+                </div>
                 <br />
                 <Formik
                   initialValues={{

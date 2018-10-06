@@ -14,8 +14,10 @@ const styles = theme => ({
   transportSection: {
     marginBottom: 40,
   },
-  noteDivider: {
-    marginBottom: 20,
+  pleaseNote: {
+    border: '3px solid #c3d7d2',
+    padding: 10,
+    backgroundColor: '#c4d7d21a',
   },
 });
 

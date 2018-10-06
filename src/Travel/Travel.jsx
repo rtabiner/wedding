@@ -26,16 +26,16 @@ class TravelAndAccommodation extends PureComponent {
             as well as some local accomodation. Use the buttons to help jump to the
             relevant sections.
           </Text>
-          <Divider className={classes.noteDivider} />
-          <Text>
+          <div className={classes.pleaseNote}>
+          <Text marginBottom={0}>
             <b>Please note:</b>
             {' '}
             we will be putting on transport to and from the church from Durrow on the day of the
             wedding. Just let us know in the RSVP section if you would like to take advantage of
             this!
           </Text>
-          <Divider className={classes.noteDivider} />
-          <div className={classes.transportButtons}>
+            </div>          
+            <div className={classes.transportButtons}>
             <Grid container spacing={24}>
               <Grid item sm={3} xs={12}>
                 <TravelMode cardText="Travel - by air" transportMode="air" />

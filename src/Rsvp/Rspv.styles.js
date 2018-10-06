@@ -1,12 +1,12 @@
 const styles = theme => ({
   form: {
     textAlign: 'left',
-    maxWidth: 700,
+    // maxWidth: 700,
     margin: '0 auto',
   },
   formSuccess: {
     textAlign: 'center',
-    maxWidth: 700,
+    // maxWidth: 700,
     minHeight: 'calc(100vh - 310px)',
     margin: '0 auto',
     display: 'flex',
@@ -56,14 +56,19 @@ const styles = theme => ({
     cursor: 'not-allowed !important',
     pointerEvents: 'all !important',
   },
-  noteDivider: {
-    marginBottom: 20,
+  pleaseNote: {
+    border: '3px solid #c3d7d2',
+    padding: 10,
+    backgroundColor: '#c4d7d21a',
   },
   dietryRequirements: {
     marginBottom: 6,
   },
   additonalInfoSection: {
     marginTop: 12,
+  },
+  submitImage: {
+    maxWidth: 400,
   },
 });
 
