@@ -18,7 +18,7 @@ class Credits extends PureComponent {
         <div>
           <Header>Credits</Header>
           <Text marginBottom={20}>
-            Website designed and create by the groom himself.
+            Website designed and created by the groom himself.
             <br />
             <br />
             Icons made by
