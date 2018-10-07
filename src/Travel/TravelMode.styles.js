@@ -6,7 +6,7 @@ const styles = theme => ({
     borderRadius: 5,
     marginBottom: 10,
     '&:hover': {
-      background: '#94b8af1a',
+      background: '#c4d7d21a',
     },
     cursor: 'pointer',
   },

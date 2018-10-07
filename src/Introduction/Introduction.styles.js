@@ -15,11 +15,14 @@ const styles = theme => ({
     margin: 0,
     lineHeight: '25px',
   },
-  scheduleLocation: {
-    fontWeight: 'bold',
-    fontSize: 18,
-    margin: 0,
-    lineHeight: '25px',
+  scheduleIcon: {
+    maxWidth: 50,
+  },
+  locationWrapper: {
+    textAlign: 'left',
+  },
+  winkFace: {
+    maxWidth: 13,
   },
 });
 

@@ -6,6 +6,7 @@ import {
   Typography,
   Divider,
 } from '@material-ui/core';
+import PropTypes from 'prop-types';
 import styles from './PageElements.styles';
 
 class Header extends PureComponent {
@@ -14,10 +15,20 @@ class Header extends PureComponent {
     return (
       <Fragment>
         <Typography variant="headline" className={classes.header}>{children}</Typography>
+        {
+          showDivider &&
           <Divider className={classes.headerDivider} />
+        }
       </Fragment>
     );
   }
 }
+
+Header.defaultProps = {
+  showDivider: true,
+};
+ Header.propTypes = {
+  showDivider: PropTypes.bool.isRequired,
+};
 
 export default compose(withStyles(styles), withTheme())(Header);

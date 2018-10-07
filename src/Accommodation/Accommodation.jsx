@@ -1,12 +1,18 @@
 import React, { PureComponent } from "react";
 import { compose } from "recompose";
-import { withStyles, withTheme, Fade } from "@material-ui/core";
+import {
+  withStyles,
+  withTheme,
+  Fade,
+  Grid,
+  Typography
+} from "@material-ui/core";
 import PropTypes from "prop-types";
 import styles from "./Accommodation.styles";
 import Header from "../Shared/PageElements/Header";
 import Text from "../Shared/PageElements/Text";
 
-class ThingsToDo extends PureComponent {
+class Accommodation extends PureComponent {
   render() {
     const { classes } = this.props;
     return (
@@ -28,23 +34,58 @@ class ThingsToDo extends PureComponent {
             <a href="mailto:rob@tabiner.net">get in touch</a> and Áine can
             provide some tips on the local area and places to stay!
           </Text>
-          <Text marginBottom={20}>
-            Castle Arms Hotel Durrow Co Laois 057 87 36117
-          </Text>
-          <Text marginBottom={20}>
-            Castle View B and B Durrow Co Laois 057 87 36544
-          </Text>
+          <Grid container spacing={24}>
+            <Grid item md={4} sm={12}>
+              <div className={classes.root}>
+                <Typography className={classes.cardContent}>
+                  <span className={classes.hotelName}>Castle Durrow</span>
+                  <br />
+                  <span className={classes.hotelPhone}>dfsdfd</span>
+                </Typography>
+              </div>
+            </Grid>
+            <Grid item md={4} sm={12}>
+              <div className={classes.root}>
+                <Typography className={classes.cardContent}>
+                  <span className={classes.hotelName}>Castle Arms Hotel</span>
+                  <br />
+                  Durrow
+                  <br />
+                  Co. Laois
+                  <br />
+                  <span className={classes.hotelPhone}>
+                    +353 (057) 87 36117
+                  </span>
+                </Typography>
+              </div>
+            </Grid>
+            <Grid item md={4} sm={12}>
+              <div className={classes.root}>
+                <Typography className={classes.cardContent}>
+                  <span className={classes.hotelName}>Castle View B and B</span>
+                  <br />
+                  Durrow
+                  <br />
+                  Co. Laois
+                  <br />
+                  <span className={classes.hotelPhone}>
+                    +353 (057) 87 36544
+                  </span>
+                </Typography>
+              </div>
+            </Grid>
+          </Grid>
         </div>
       </Fade>
     );
   }
 }
 
-ThingsToDo.propTypes = {
+Accommodation.propTypes = {
   classes: PropTypes.object.isRequired // eslint-disable-line
 };
 
 export default compose(
   withStyles(styles),
   withTheme()
-)(ThingsToDo);
+)(Accommodation);

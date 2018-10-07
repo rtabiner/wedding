@@ -1,11 +1,23 @@
 import React, { PureComponent, Fragment } from "react";
 import { compose } from "recompose";
-import { withStyles, withTheme, Fade, Divider, Grid, Hidden } from "@material-ui/core";
+import {
+  withStyles,
+  withTheme,
+  Fade,
+  Divider,
+  Grid,
+  Hidden
+} from "@material-ui/core";
 import PropTypes from "prop-types";
 import styles from "./Introduction.styles";
 import Header from "../Shared/PageElements/Header";
 import Text from "../Shared/PageElements/Text";
-import Gallery from 'react-photo-gallery';
+import Gallery from "react-photo-gallery";
+import Sleep from "../Images/slumber.svg";
+import Couple from "../Images/wedding-couple.svg";
+import Cheers from "../Images/cheers.svg";
+import Wink from "../Images/wink-face-square.svg";
+import Dancer from "../Images/dancer-with-music.svg";
 
 class Introduction extends PureComponent {
   dividerLine() {
@@ -24,11 +36,11 @@ class Introduction extends PureComponent {
         <Grid item xs={12} sm={12} md={2}>
           <p className={classes.scheduleTime}>{time}</p>
         </Grid>
-        <Grid item xs={12} sm={12} md={4}>
-          <p className={classes.scheduleLocation}>{location}</p>
+        <Grid item xs={12} sm={12} md={2} className={classes.locationWrapper}>
+          <img className={classes.scheduleIcon} src={location} />
         </Grid>
-        <Grid item xs={12} sm={12} md={6}>
-        <Text marginBottom={0}>{summary}</Text>
+        <Grid item xs={12} sm={12} md={8}>
+          {summary}
         </Grid>
       </Fragment>
     );
@@ -38,22 +50,26 @@ class Introduction extends PureComponent {
     const { classes } = this.props;
     const PHOTO_SET = [
       {
-        src: 'https://lh3.googleusercontent.com/oILs8p1_WE1VY8dQrvJot1IPxygv5KOGe0wYO3QV9-5e-2k3NGi3e2qMHzx_MgQHoHRA3yYnj-2cDnjZd59aLfUlCC5BYmAS3VHa_EyXr3XXM9f_i-A6rBAeT8Cup_FCd3BRJkv49LU8oGk6-COvcHSnm3vvrOJbHCIhnvlPAgpjfZ0W47cNd-ouwYh13C5XLeOZbl-A5vtUDjs7dFmOODGokx3dIdYLVbCP-V3byKGlByhob4faB15qAuiA6KaTo9MurvrVdNmVFcbz7uL9oh-zlctYb88OzmyjaUbstBFjK7lPNKC6fyWjSuYwYdnJHp6NVlaKKqBOIElt3EWEOFal_2ZvZa_N6L5X5syzSwXr_lAgwNxov2mqWrWtlFFT3Xsel7YROjG0vepog33l5mcFN3L3CbEU1qokF3uIQuyaC7ICdT3y3UTNRwYka9jRu9U-zezVoBLHost2pM5dVMhdnd9ePx14zAQUKHzwVDNyLxrj3NDA7eUQpPdl_OLVg6DvUV1SvvtJ2_AnhF82XVzBP-8YMNtRCZ-r7NUWEGfP7aQHDNWI6wAVDc3jmG-Ws9Y-vhYDN9DCxci44vw2Iyopdos2sB2bg8wM5hWW0hU4c1pKwxnWQO9G6AtwFAU_O2lW8YeWPBdtUqwYtkfQfBp68cYNq1bVHoRt4Sjl3damSARbS1twRCdS=w1082-h1446-no',
+        src:
+          "https://lh3.googleusercontent.com/qehWttHp_bD-Y8HP1detzOnU7_Lf7hjBGQAGKpa574Oeml9TBNBG2cqb-ucgM_mPbIVN3PiYoWURXQH2ktqNFd3OmzRFFqAbXQnCqOuMI2PjnJOEaSQjA1hE1tckyO2NUpkCYLlSwh-ENgxsMTDzTRNxX8LhwD4cqjPx5H6d_N_RkxgLY2Bx73_VLKvJcSI-MpaF1gcJ-s2kWrGNKb4FZKX8jfVnryMz9mQGPmRxqu9yH__TElZMhDEn6SQ69kpeuCwQZwoPNyRcQI7uWwZDbdFM9b9Wk6DMIV7m3Bf-ernHn1rW8Q7rtgkcIqvCcW9uphYzinQJbz-tcXOtiIfn5KFB7IyOZSha30Lt6SgvGX58tjEoWKbChLIcMO3g5NjaAi5ARAWOq_TVqPGFqVPXKBw2-GRgO6JGcp5X6w1eQq900IiDKheOE8OsJ1vqXPZLT0Q2zBZ9nf9F7T-yMizwYl5-mksat_ZKba_wPE_UKlzp9p6LpjaaYgsgrdQpzh5Ub4oa8jwW8pc4ZEOAdPUGm_860wzILFprFEnt9LSaPkDLrBMoVnF7Uo-6fBlRb4FyH2RrMyn4Kc1qYkXTuBl83MQP7JLIUk8SuEYBz_vCBfU9sFVyR6QWtBqAe8e3mj4NL2bs7xHRXTNf9TxlX4tCea8yRi897n9qUK-MWeH5mjrEx39H9JED0blk=w960-h1280-no",
         width: 3,
         height: 4
       },
       {
-        src: 'https://lh3.googleusercontent.com/IKnvl2cugEBJoMs0BjvlxTAI0k2ONGXWNm0W1rclmCpWeRDC5i6nVFsjMJV6fWDBdQvt8q2fHmjgk7lJYxnmlSQ0ZGVmxkZlI9d9AjkkFE2AwJjiTU0IxwaI_2nPqu4KvaEPZUuwveuNB3Qhk2S-EyOgmjq3GBnAGEl3SgT3Be8EbtOcrCeB5EfIbcbAOLWLCJuzISrIVDpuO1FUYASZLfdfUlkjaZ5a3aPgkXYNX5SLHFs64sTBmTotHdcX1AW4nJtXVT2O5KPMbP0_Vabuj9G9kLAkTzT0AcNYUDQHcOAtHfy-o1jqYOJ6grRs3WzMfoSboRILTZIFn1xAZQybqFBVOmcwPhAjinO7tFgdCmnuIU2x5XAGpNpQ4ZD5BYpfd5OmfQm-zvhXgFXKCRdOXxkE6L6YQ8Ezk22fzLEyVDZTlsSTqPQxr6BgMz5FNIV0U1CAhpn0HiPltGu2xMFzwOKKjgB7iqg10cbAM0rco02WzaWDsme6tZDTpEaD-pH6exdqiW563OGNXyPKcLrv_iRniwe5vP91Vhxd88XhEoeJjCbTHQB_JiIXTfqmxCT8dicR-MGcwANApdEuF25JVzq87LjkWSuJTCNW2s9ogU3Sf6Nu15Y_5kqYLnDD_8A=w1086-h1446-no',
+        src:
+          "https://lh3.googleusercontent.com/uAZzHnlpYtlOjFH6OnV6Rg6kqWMe7PPljEiwOp0X2UN8gkTlNNt590z98WFNgmWUekaijija17l6dSkx1lWJOfSkqcnDCTkRmKhAA2WcZ-TcvFd690SIEKO3jqGXPHkh8XtrZlZItCAikECwNTAeKhM_dd0SCJZYHs4tQqx7Ef8stYGBTPDD-c2UR7eCSzsJvZw3lidFtnT4soomD3nugPq_-aZwx_-ZWUzmfiMUnZVfucRiCV-oDKJbryrPeQzSdVmaoiQGOt3YnUGcjhc9sriJwkX-NGvtcZuEBIt_Y1zUoDfR0wpyJufyUilKBlDpZqpsobpSaJ8yo81apFlQZn0Wn0oUcgHeEj12J1WlOeQBWobW4m-Bwmw1ZFlYGQDgZ28CGpfPwvSnGs5QburJ80nZz_fykZ3zZur3C0kePisepvOPdO2Spv7GTf_e1nG_Hk1xbic__6NTfqKAil-F5pYbS269tZFHpBO7Uo4GI6hf5EF89RDBbSNnOnDjfVbS2VjLs8dApgpCxgo95VOQICm7T6iEara8rULQKw1LMv42kv3u-QrGjmtBCCa3zZMtk4ODKJnuZ0WXFpcp4kQbvIVS6gsP93IVJsw1dKUwwNe7mo2J7ad-iKi4QhDtocpJetMWNtl8C4l2aO04G_ow-FlwDNeAh4lK6B0wHqhISN-sgnHdrWxltrkt=w960-h1280-no",
         width: 3,
         height: 4
       },
       {
-        src: 'https://lh3.googleusercontent.com/sYyxRuk45R5waISIERPhgMMEaB4v0dr8WveayEJPTfpufWUKSk32zRLrSdYJBDiL7FP3bOq3lDmqyK9TyWEtTeOGSaZt6hCqBg33p7fYu-YinYj2ZsRFhYGRFDl8vqQxRwFhBamscD4OLVw0PBHpcLmpJ-JF8hNKBO3aOOGCtXAgDHMWUPUxosXl3n7Xyz8oktyUyVKJnYrzcPj8v0APTcOTKzQgehqNQyOK-hTHjaOf5QBumixOETC-jST1EVXYKELt6SBKbW0GeWeJciXGV9nJX9uE082gnUOKfsMKZxH18NjGc-iWXLzo2Tcpl5rCj6jUYmkQTLmMIpaTvFYLD8IuMyeodoeu79w6MAfzP0wASqb21DYTfKauEqsTwP4OgO7B7Hs6LWcQ-7N7ZyOVnZ2Ht8UknJ3_GLsuFq7_zbVEXdmepzatxWw9hMDg0jhGZKmq3EcQmXMuXQc-TfwEqP9yxA_GGTAPmew5b_LvqT5PCX2wBtk4TZ4hFkF2AKyjUhmpPmW8TImBJZ5ExWS2_U8NnEExdTu03J9JzHqD0tS8D_b7p8alxc0bBvcExSGDiyApQGD3doUofdU7IsY7bWJG7jJqMBsVG6UWdQ0d67OiBBtz9UCn32OQx4v_yfEImqai5ZByGvP3-1H-FFw5OL6IRGyhWSx7HU72Al3HrMUPjModShXPxfs1=w960-h1280-no',
+        src:
+          "https://lh3.googleusercontent.com/IvKuDCCzc2heCWysmjIk6El4qfCkxWqt58s1sZ0Gs5a_syF6z2sXh23FIwm4ub9N8wV0LeTTEmGD-b5nnXTnP8BpOuvSWy-p0gsRMosUsz2e0JNEd6gs-HFY-SrR_kOGJTidZxhkfF9C89OVcVaCEcfw2HvpayoaE1Bqu2QDbZNZbS4pvSbXFgZNnuQITnolkeSclxD4tn0HoEAYx8kYt_3cVaIBIWIcIKglkgKC7nbMD8BnTtKnPGIdGwD3i3k-fZ4UDtUZ_aDdjUcB5YhVwqDFe4HDSGmXc5krtN5QGpUaan5FPN4tF0muh3CbsX3eYCCZtF9yzNIbW80qAXYkX6wEO9A3ZwZX_9hvLYrkL5KOSycrzfQtPyOaAKAlzewu21S6oCB2ukxdQOTY6LKpGfeJmr6GXLiPLzWI3pAUQ5Dck1wnx-z7XF5Lx5s_rtafWvszL-giMd8lvNOsFl9ZCVIRkRAO1k2gvXr8-NkU5KQxOdqQWES9csgRZ1dNlNgbfZ_Wn2xCb0ja_xK7fKEHnMZlgS72wvwwpieQH3iJ6tDxbaA-pf6m0ydAJqTcBoJEXoCe2IYCOeqR-Vd0O-K8kk8IQxwDBCXqejG7s_HmioB40tXFJzhBhzCJnIY4Jen5af928oV5n-JlLgL-fNYmS9_nhM1jm8N5pTsMWnKGYO2Bm6y4E8HbG2P2=w1082-h1446-no",
         width: 3,
         height: 4
-      }, 
+      },
       {
-        src: 'https://lh3.googleusercontent.com/cTl7BmGkJhPmjevdktMwLO5l4M_3UlV6VyIU9y5980s-6CocOpkVnNw5TbFGZQyhkgrRTP9uQ-0BCMnwlMXomUm3Fod63ZVJvvqRpgUlnwqoAULFynwEbhMGEpcVVZMWS2MxHK6v6kqoffZeFGxfWs8XCwV1F3HHbBgLAKsvGc_r088rk-2bvbc_2T2IOOuucPyj6yRhr8VbXP9Td-pBHWsZ9-tk-zhKQ-hDyEATkaMUWSIaNpWSymOyH3nruhsSK-ZWH5Ni4MhBFVhuHqIoc3snl8EHPSzHEUEeyK4K16FvTZ2yGoeAOaRHhJqFZ9wjfY8FETVh3YJNOkQmFC0VagdG8gNegFl1MGGk8OM7xmCcYQMWtcsda7tSzoos5zOihiS2kBugrAzEvFzc64tV48RUcdw61SXgoTZpTw--xIvCUfAU7bucULUN9x__DUl5lpoYZDYtwsL_lqoC9xoHfwRg1OUBmrIy0CBl14hLKjb5jmpAVCiw9rNU3J4O0ki-y5fFSICDaiuXRi0CU0oLFGGkdR9MdKVfjHYrJ5k9-t6igtyO5Oh9OS6e75DK1jbu_wSoBGDT6yEdSrs2xRIkfseYPxZAoYmsFOSjeU9o8bdeNRZrncQ_Y-PzIdtxJemJFDtaAaCfr1Ud0h4NTW9wfDuastoiVnqeKshqFNOwv6DBBEa_8A-rzHUJ=w1088-h1446-no',
+        src:
+          "https://lh3.googleusercontent.com/BYeSkUM_Dz5EmGfGIf-P4t2X0Np94tLbNPxaLC04Bq5pYiyiHNliclDBY2Vg9x3GXMW0Nv56oOPMfKpYl25y2antFwKBlg0aWqZ3JYN3pXg4VV31bjIkbaEbUsjoAK_sq8oojShEsv-gXY6MrhI_mCdL2ko3jFb8oY83MOtQX_uRBgZwMWxTZoImHmFXeNgSwsH_nw5BJ0eNQ_lxTc-I8OkPPgiSHPYIKsuL5Z_vXgPsB7Kp0VP1JLMb-x6HMaiXqhjuEi85crCqgFW75gaCZvayKagNxXi2q7L3Q4t6OEuJDurgzs4kQWZCgN6ikr2P3Rj1bOyuF3r0x2gvGth72SNNY2ue6pIK8e5NpfsJYXgfKdKw4I9-18VxBxqIqJp-8Lj4KV0fiAg8D312kiS4DICRR3EdMzmTAebjrsLM7xaOhUdzKGvpNgDLAJIEhh9bmPxqMLHszcDzujyfwe61eFvc8TD7Ks7XWgaF2QI8cZKZ1_fB5AuqpcL76E99-lC1nuNtg2wXYdgtL59hibwocsbtIzHsQL0toK7H-ihNKM-NM16WBGvaKtyI5yePWrnGWcp2TPhQQ-jebTEpyXL4mRAoPwnTnjIyq_XmJr9nfGFS4F0BO2qIgscPHehQ5qPIrEBKtQEVhrt0vJPB90Vx9qFZtNDn-aRpthXoP8XDbUlXPP98uo1CfGPp=w1082-h1446-no",
         width: 3,
         height: 4
       }
@@ -67,8 +83,8 @@ class Introduction extends PureComponent {
             <Text marginBottom={10}>
               We&apos;re super excited to welcome you to our wedding in
               Áine&apos;s home town, Kilkenny. Located in Ireland&apos;s
-              &apos;sunny&apos; south east, the &apos;Marble City&apos; is a great
-              spot to spend a few days soaking up Irish culture.
+              &apos;sunny&apos; south east, the &apos;Marble City&apos; is a
+              great spot to spend a few days soaking up Irish culture.
             </Text>
             <Text marginBottom={10}>
               After the wedding ceremony in Kilkenny, we will head to Durrow, to
@@ -77,8 +93,8 @@ class Introduction extends PureComponent {
             </Text>
             <Text marginBottom={10}>
               On these pages, you can find details of the wedding, as well as
-              details on the local area. We&apos;re also happy to help answer any
-              further questions over email by contacting us at:&nbsp;
+              details on the local area. We&apos;re also happy to help answer
+              any further questions over email by contacting us at:&nbsp;
               <a href="mailto:rob@tabiner.net">rob@tabiner.net</a>.
             </Text>
             <Text>
@@ -97,23 +113,41 @@ class Introduction extends PureComponent {
             <Grid container spacing={24}>
               {this.scheduleBlock(
                 "1pm",
-                "St. Canice's Church",
-                "Please join us for our Wedding Ceremony at St. Canice's Church, Kilkenny. St. Canice's is Áine's local church. Please arrive at 12.30pm for a 1pm start, you don't want to be later than the Bride (and Áine is never late)! For those travelling from Durrow, we will provide a bus, which will be leaving at 12 (please let us know on the RSVP if you would like to take advantage of this)."
+                Couple,
+                <Text marginBottom={0}>
+                  Please join us for our Wedding Ceremony at St. Canice's
+                  Church, Kilkenny. St. Canice's is Áine's local church. Please
+                  arrive at 12.30pm for a 1pm start, you don't want to be later
+                  than the Bride (and Áine is never late)! For those travelling
+                  from Durrow, we will provide a bus, which will be leaving at
+                  12 (please let us know on the RSVP if you would like to take
+                  advantage of this).
+                </Text>
               )}
               {this.scheduleBlock(
                 "3pm",
-                "Castle Durrow",
-                "Whoooooo we are married (hopefully). The reception begins at 3pm at Catle Durrow, a place that is very special to us both! At this point you will have earned your pint of Guinness - enjoy!"
+                Cheers,
+                <Text marginBottom={0}>
+                  Whoooooo we are married (hopefully). The reception begins at
+                  3pm at Catle Durrow, a place that is very special to us both!
+                  At this point you will have earned your pint of Guinness -
+                  enjoy!
+                </Text>
               )}
               {this.scheduleBlock(
                 "9pm",
-                "Dancefloor",
-                "Time to show us your best moves."
+                Dancer,
+                <Text marginBottom={0}>Time to show us your best moves.</Text>
               )}
               {this.scheduleBlock(
                 "2am",
-                "Hometime",
-                "All good things must come to an end (unless you're heading to the residents bar winky face)"
+                Sleep,
+                <Text marginBottom={0}>
+                  Unfortunately, all good things must come to an end (unless
+                  you're heading to the residents bar{" "}
+                  <img src={Wink} className={classes.winkFace} />
+                  ).
+                </Text>
               )}
               {this.dividerLine()}
             </Grid>
