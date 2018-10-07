@@ -5,7 +5,7 @@ import {
   withStyles,
   withTheme,
   Divider } from '@material-ui/core';
-import Header from '../Shared/PageElements/Header';
+import SubHeader from '../Shared/PageElements/SubHeader';
 import styles from '../Shared/HeadedSection.styles';
 
 class HeadedSection extends PureComponent {
@@ -14,7 +14,7 @@ class HeadedSection extends PureComponent {
     return (      
         <Element name={anchor} className={classes.section}>
           <Divider className={classes.divider} />
-          <Header>{header}</Header>
+          <SubHeader>{header}</SubHeader>
           {this.props.children}
         </Element>
     );

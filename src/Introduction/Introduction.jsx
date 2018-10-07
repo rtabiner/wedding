@@ -1,6 +1,6 @@
 import React, { PureComponent, Fragment } from "react";
 import { compose } from "recompose";
-import { withStyles, withTheme, Fade, Divider, Grid } from "@material-ui/core";
+import { withStyles, withTheme, Fade, Divider, Grid, Hidden } from "@material-ui/core";
 import PropTypes from "prop-types";
 import styles from "./Introduction.styles";
 import Header from "../Shared/PageElements/Header";
@@ -17,16 +17,17 @@ class Introduction extends PureComponent {
   }
 
   scheduleBlock(time, location, summary) {
+    const { classes } = this.props;
     return (
       <Fragment>
         {this.dividerLine()}
-        <Grid item xs={2} sm={2}>
-        <Text marginBottom={0}>{time}</Text>
+        <Grid item xs={12} sm={12} md={2}>
+          <p className={classes.scheduleTime}>{time}</p>
         </Grid>
-        <Grid item xs={4} sm={4}>
-        <Text marginBottom={0}>{location}</Text>
+        <Grid item xs={12} sm={12} md={4}>
+          <p className={classes.scheduleLocation}>{location}</p>
         </Grid>
-        <Grid item xs={6} sm={6}>
+        <Grid item xs={12} sm={12} md={6}>
         <Text marginBottom={0}>{summary}</Text>
         </Grid>
       </Fragment>
@@ -85,7 +86,12 @@ class Introduction extends PureComponent {
               celebrate our special day.
             </Text>
           </div>
-          <Gallery columns={4} photos={PHOTO_SET} />
+          <Hidden xsDown>
+            <Gallery columns={4} photos={PHOTO_SET} />
+          </Hidden>
+          <Hidden smUp>
+            <Gallery columns={2} photos={PHOTO_SET} />
+          </Hidden>
           <div className={classes.schedule}>
             <Header showDivider={false}>Schedule</Header>
             <Grid container spacing={24}>

@@ -38,21 +38,21 @@ class TravelAndAccommodation extends PureComponent {
             <div className={classes.transportButtons}>
             <Grid container spacing={24}>
               <Grid item sm={3} xs={12}>
-                <TravelMode cardText="Travel - by air" transportMode="air" />
+                <TravelMode cardText="Air" transportMode="air" />
               </Grid>
               <Grid item sm={3} xs={12}>
-                <TravelMode cardText="Travel - by car" transportMode="car" />
+                <TravelMode cardText="Car" transportMode="car" />
               </Grid>
               <Grid item sm={3} xs={12}>
-                <TravelMode cardText="Travel - by bus" transportMode="bus" />
+                <TravelMode cardText="Train" transportMode="train" />
               </Grid>
               <Grid item sm={3} xs={12}>
-                <TravelMode cardText="Travel - by train" transportMode="train" />
+                <TravelMode cardText="Bus" transportMode="bus" />
               </Grid>
             </Grid>
           </div>
 
-          <HeadedSection header="Travel - by air" anchor="air">
+          <HeadedSection header="Air" anchor="air">
             <div className={classes.transportSection}>
               <Text>
                 Dublin Airport is by far the largest airport, and has regular flights all year round
@@ -67,7 +67,7 @@ class TravelAndAccommodation extends PureComponent {
             </div>
           </HeadedSection>
 
-          <HeadedSection header="Travel - by car" anchor="car">
+          <HeadedSection header="Car" anchor="car">
             <div className={classes.transportSection}>
               <Text>
                 Travelling by car is by far the easiset and quickest way to get around, and we
@@ -92,7 +92,7 @@ class TravelAndAccommodation extends PureComponent {
             </div>
           </HeadedSection>
 
-          <HeadedSection header="Travel - by train" anchor="train">
+          <HeadedSection header="Train" anchor="train">
             <div className={classes.transportSection}>
               <Text>
                 It is possible to travel by train to Kilkenny from Heuston Station in Dublin.
@@ -108,7 +108,7 @@ class TravelAndAccommodation extends PureComponent {
             </div>
           </HeadedSection>
 
-          <HeadedSection header="Travel - by bus" anchor="bus">
+          <HeadedSection header="Bus" anchor="bus">
             <div className={classes.transportSection}>
               <Text>
                 <b>Dublin to Kilkenny</b>

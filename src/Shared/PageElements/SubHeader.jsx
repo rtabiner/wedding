@@ -4,20 +4,18 @@ import {
   withStyles,
   withTheme,
   Typography,
-  Divider,
 } from '@material-ui/core';
 import styles from './PageElements.styles';
 
-class Header extends PureComponent {
+class SubHeader extends PureComponent {
   render() {
     const { classes, children, showDivider } = this.props;
     return (
       <Fragment>
-        <Typography variant="headline" className={classes.header}>{children}</Typography>
-          <Divider className={classes.headerDivider} />
+        <Typography variant="title" className={classes.subHeader}>{children}</Typography>
       </Fragment>
     );
   }
 }
 
-export default compose(withStyles(styles), withTheme())(Header);
+export default compose(withStyles(styles), withTheme())(SubHeader);

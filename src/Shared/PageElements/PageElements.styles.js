@@ -4,6 +4,11 @@ const styles = theme => ({
     marginBottom: 40,
     color: theme.palette.colors.darkGrey,
   },
+  subHeader: {
+    marginTop: 20,
+    marginBottom: 20,
+    color: theme.palette.colors.darkGrey,
+  },
   headerDivider: {
     marginBottom: 30,
   },

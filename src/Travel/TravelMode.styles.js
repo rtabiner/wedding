@@ -18,7 +18,7 @@ const styles = theme => ({
     width: 60,
     height: 60,
     marginBottom: 10,
-    marginTop: 10,
+    marginTop: 15,
   },
 });
 

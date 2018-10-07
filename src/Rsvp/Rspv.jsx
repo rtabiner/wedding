@@ -58,9 +58,9 @@ class Rsvp extends PureComponent {
           && (
             <Fade timeout={1000} in={formSubmitted}>
               <div className={classes.formSuccess}>
-                <img className={classes.submitImage} src="https://lh3.googleusercontent.com/e70B8-iPwVUJ_WGdFJfUJfY7s9wO0MHOpEX9ltUAAUssrLWgX2WSl_YvNTrulAZGApKwKimtyPrtKExUZH-8hnN-Dw3i5jIhtAZtu6KhN5NK_whbcucB6WWzrNEAP8SsUtV5K5p6dCYtZ5mpNZyb_tLPETfTruwiPSlJ8mZLMmyFvzE1TOOnKX70x9gvnoZ7b0k0Vymo_-zDmFmsIbGx0rs7UC9LYSm_lXywxxPWGvtpyF5lAh9GZrTX6Dh9-WjeN96v1pnKSHT-GykIrMOtYgfS1g3hBr05Iwe5KOE97r2sXShlikjQXOqbDXlclfbXtoqGY7eL1a3QH86e8NlJzR4IHKMkO1kP3bjabFZAGZ_acA8TuFN19a1zMc1X81SxbfCvtSsRX_4AyYvWJ3q0T3H-X7eiwpth31TOioXC5xzo6cqHaSyadcZnJ8NOpu48KGXy9YWqxD5l7Oq1Qha24ZoLxmFKWkpEgtmJVPZznWjQyMSo4i7ThSAPOfhDnQPeYVuWissgaXPR_rGkXJB1DxA8wRga5lfDsBZ3wwmpoa0bqNn_RdZrsrtNg0gq_NCSkWTnfED_a77ya0ZE3CABU_wlkCrJnXeEC50U8utAkzEj3bPlGonLSfYk6GRfv0b3fKdZftYiI9uZtgI4CIUfoEKI_MgvNhfoQv5wgikFfYjUR1kIMT83TwXu=w2049-h1537-no" />
+                <img className={classes.submitImage} src="https://lh3.googleusercontent.com/Fxwk-q4loq75yj-fSEujyszJt1O0zmyolnEqxOUPYfbOZ4tyvH3oH68S7R-Dvh47zGu98ZjvolFvRyVPr7tycN3zXB6FYZr91HSBlqqWCpPtWP8sUjGXW73hBykAvpIVxJ2djoG6v0sBwrl8_yiGVxogOHQQZ3E5dR4RIB2BAtxiC697Pl0nkednvlkMPNB06hdH4jAhWNR8Fl_uouYOslDqU4fNSo6rIbIXZ-5AGrjW5raqBFm6jQvWmgnPk4MVEE81KuhUSIjGWTst7MT-ICk7lPKkBP_HePTeuyiIAbEsyRBM4VtTJ_4PjUeMyFRjy8EKBZuNSnwKmvgIjVK3uSHfF5TmJnOrafa1aGGuoPIZoM3fQav8RENq-iuMg6PADWHNf2H0YFjneQdzA2ZNvUvgTDE9LJa2Yt6ByfH9eR2o0qqtoqlSSccbmIC5Vf3Np_fyR9JSG2BYXvA-YMV0z2tP3wPqZzqgZr7tP2Xtytg2zlfqJwbya1qUwt44s9f1fy5aIUGE-S_veQFa2jVzkaKrBLg1nIFq0SUtmjY5I0-GMb89k4pKyz0RBouXVKHu1ffOw0v8hEip04lP6QiM2abQFfRe-fme5eLtFs-CsBwKz_9CmQxjxIppi-DUpE_-J_mO7JtdSJZRdN_0XSwZUG0-7SBA2AChToTpuxBJgBBkZM3FQN3RpFBc=w1192-h1446-no" />
                 <br /><br />
-                <h3>Thanks or submitting your response.</h3>
+                <h3>Thanks for letting us know.</h3>
                 {attending && (
                   <div>
                     <Typography paragraph className={classes.successSummary}>
