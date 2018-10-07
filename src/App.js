@@ -1,10 +1,12 @@
 import React from 'react';
 import './App.css';
 import { Switch, Route } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Introduction from './Introduction/Introduction';
 import Accommodation from './Accommodation/Accommodation';
 import Travel from './Travel/Travel';
 import RSVP from './Rsvp/Rspv';
+import Credits from './Credits/Credits';
 import Navigation from './Layout/Navigation';
 import ring_logo from './Images/ring_logo.png';
 
@@ -25,9 +27,12 @@ const App = () => (
         <Route path="/Travel" component={Travel} />
         <Route path="/Accommodation" component={Accommodation} />
         <Route path="/RSVP" component={RSVP} />
+        <Route path="/Credits" component={Credits} />
       </Switch>
 
     </div>
+    <br />
+    <Link className="plain-link credits" to="/Credits">Credits</Link>
   </div>
 );
 
