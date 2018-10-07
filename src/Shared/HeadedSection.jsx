@@ -1,24 +1,33 @@
-import React, { PureComponent, Fragment } from 'react';
+import React, { PureComponent } from 'react';
 import { Element } from 'react-scroll';
 import { compose } from 'recompose';
+import PropTypes from 'prop-types';
 import {
   withStyles,
   withTheme,
-  Divider } from '@material-ui/core';
-import SubHeader from '../Shared/PageElements/SubHeader';
-import styles from '../Shared/HeadedSection.styles';
+  Divider,
+} from '@material-ui/core';
+import SubHeader from './PageElements/SubHeader';
+import styles from './HeadedSection.styles';
 
 class HeadedSection extends PureComponent {
   render() {
-    const { header, anchor, classes } = this.props;
-    return (      
-        <Element name={anchor} className={classes.section}>
-          <Divider className={classes.divider} />
-          <SubHeader>{header}</SubHeader>
-          {this.props.children}
-        </Element>
+    const {
+      header, anchor, classes, children,
+    } = this.props;
+    return (
+      <Element name={anchor} className={classes.section}>
+        <Divider className={classes.divider} />
+        <SubHeader>{header}</SubHeader>
+        {children}
+      </Element>
     );
   }
 }
+
+HeadedSection.propTypes = {
+  header: PropTypes.string.isRequired,
+  anchor: PropTypes.string.isRequired,
+};
 
 export default compose(withStyles(styles), withTheme())(HeadedSection);

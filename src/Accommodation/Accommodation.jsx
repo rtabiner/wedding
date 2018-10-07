@@ -1,16 +1,16 @@
-import React, { PureComponent } from "react";
-import { compose } from "recompose";
+import React, { PureComponent } from 'react';
+import { compose } from 'recompose';
 import {
   withStyles,
   withTheme,
   Fade,
   Grid,
-  Typography
-} from "@material-ui/core";
-import PropTypes from "prop-types";
-import styles from "./Accommodation.styles";
-import Header from "../Shared/PageElements/Header";
-import Text from "../Shared/PageElements/Text";
+  Typography,
+} from '@material-ui/core';
+import PropTypes from 'prop-types';
+import styles from './Accommodation.styles';
+import Header from '../Shared/PageElements/Header';
+import Text from '../Shared/PageElements/Text';
 
 class Accommodation extends PureComponent {
   render() {
@@ -30,17 +30,26 @@ class Accommodation extends PureComponent {
           </Text>
           <Text marginBottom={20}>
             If you are planning on staying elsewhere, or are looking to extend
-            your trip, feel free to{" "}
-            <a href="mailto:rob@tabiner.net">get in touch</a> and Áine can
+            your trip, feel free to
+{" "}
+            <a href="mailto:rob@tabiner.net">get in touch</a>
+{' '}
+and Áine can
             provide some tips on the local area and places to stay!
-          </Text>
+</Text>
           <Grid container spacing={24}>
             <Grid item md={4} sm={12}>
               <div className={classes.root}>
                 <Typography className={classes.cardContent}>
                   <span className={classes.hotelName}>Castle Durrow</span>
                   <br />
-                  <span className={classes.hotelPhone}>dfsdfd</span>
+                  Durrow
+                  <br />
+                  Co. Laois
+                  <br />
+                  <span className={classes.hotelPhone}>
+                    +353 (0)57 873 6555
+                  </span>
                 </Typography>
               </div>
             </Grid>
@@ -54,7 +63,7 @@ class Accommodation extends PureComponent {
                   Co. Laois
                   <br />
                   <span className={classes.hotelPhone}>
-                    +353 (057) 87 36117
+                    +353 0(57) 87 36117
                   </span>
                 </Typography>
               </div>
@@ -62,14 +71,14 @@ class Accommodation extends PureComponent {
             <Grid item md={4} sm={12}>
               <div className={classes.root}>
                 <Typography className={classes.cardContent}>
-                  <span className={classes.hotelName}>Castle View B and B</span>
+                  <span className={classes.hotelName}>Castle View B&#38;B</span>
                   <br />
                   Durrow
                   <br />
                   Co. Laois
                   <br />
                   <span className={classes.hotelPhone}>
-                    +353 (057) 87 36544
+                    +353 (0)57 87 36544
                   </span>
                 </Typography>
               </div>
@@ -87,5 +96,5 @@ Accommodation.propTypes = {
 
 export default compose(
   withStyles(styles),
-  withTheme()
+  withTheme(),
 )(Accommodation);

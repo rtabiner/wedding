@@ -9,7 +9,7 @@ import styles from './PageElements.styles';
 
 class SubHeader extends PureComponent {
   render() {
-    const { classes, children, showDivider } = this.props;
+    const { classes, children } = this.props;
     return (
       <Fragment>
         <Typography variant="title" className={classes.subHeader}>{children}</Typography>

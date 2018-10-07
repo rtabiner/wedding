@@ -1,7 +1,7 @@
 const styles = theme => ({
   intro: {
     marginBottom: 30,
-  },  
+  },
   schedule: {
     paddingTop: 30,
     marginBottom: 50,

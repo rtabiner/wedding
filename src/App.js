@@ -1,6 +1,5 @@
-import React, { PureComponent } from 'react';
+import React from 'react';
 import './App.css';
-import { Fade } from '@material-ui/core';
 import { Switch, Route } from 'react-router-dom';
 import Introduction from './Introduction/Introduction';
 import Accommodation from './Accommodation/Accommodation';
@@ -14,7 +13,7 @@ const App = () => (
     <header className="App-header">
       <div className="App-title">
         <span>Áine </span>
-        <img className="titleImage" src={ring_logo} />
+        <img alt="logo" className="titleImage" src={ring_logo} />
         <span> Rob</span>
       </div>
     </header>

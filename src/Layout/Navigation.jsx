@@ -27,7 +27,7 @@ class Navigation extends PureComponent {
           <Link className="plain-link" to="/">
             <span
               className={
-                location.pathname == "/"
+                location.pathname === "/"
                   ? classes.activeTabLabel
                   : classes.tabLabel
               }
@@ -41,7 +41,7 @@ class Navigation extends PureComponent {
               <Hidden smUp>
                 <span
                   className={
-                    location.pathname == "/Travel"
+                    location.pathname === "/Travel"
                       ? classes.activeTabLabel
                       : classes.tabLabel
                   }
@@ -52,7 +52,7 @@ class Navigation extends PureComponent {
               <Hidden xsDown>
                 <span
                   className={
-                    location.pathname == "/Travel"
+                    location.pathname === "/Travel"
                       ? classes.activeTabLabel
                       : classes.tabLabel
                   }
@@ -66,7 +66,7 @@ class Navigation extends PureComponent {
           <Link className="plain-link" to="/Accommodation">
             <span
               className={
-                location.pathname == "/Accommodation"
+                location.pathname === "/Accommodation"
                   ? classes.activeTabLabel
                   : classes.tabLabel
               }
@@ -78,7 +78,7 @@ class Navigation extends PureComponent {
           <Link className="plain-link" to="/RSVP">
             <span
               className={
-                location.pathname == "/RSVP"
+                location.pathname === "/RSVP"
                   ? classes.activeTabLabel
                   : classes.tabLabel
               }

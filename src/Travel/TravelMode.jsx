@@ -8,18 +8,20 @@ import Bus from '../Images/bus.svg';
 import Air from '../Images/air.svg';
 import styles from './TravelMode.styles';
 
+/* eslint-disable default-case */
 class TravelMode extends PureComponent {
   getTransportIcon(transportMode) {
-     switch (transportMode) {
-       case 'car':
-       return <img src={Car} className={this.props.classes.icon} />;
-       case 'bus':
-       return <img src={Bus} className={this.props.classes.icon} />;
-       case 'train':
-         return <img src={Train} className={this.props.classes.icon} />;
-       case 'air':
-       return <img src={Air} className={this.props.classes.icon} />;
-      }
+    const className = this.props.classes.icon;
+    switch (transportMode) {
+      case 'car':
+        return <img alt="car" src={Car} className={className} />;
+      case 'bus':
+        return <img alt="bus" src={Bus} className={className} />;
+      case 'train':
+        return <img alt="train" src={Train} className={className} />;
+      case 'air':
+        return <img alt="air" src={Air} className={className} />;
+    }
   }
 
   render() {

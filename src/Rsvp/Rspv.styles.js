@@ -68,7 +68,7 @@ const styles = theme => ({
     marginTop: 12,
   },
   submitImage: {
-    maxWidth: 400,
+    maxHeight: 300,
   },
 });
 

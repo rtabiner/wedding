@@ -22,7 +22,7 @@ Text.defaultProps = {
 };
 
 Text.propTypes = {
-  marginBottom: PropTypes.number.isRequired,
+  marginBottom: PropTypes.number,
 };
 
 export default compose(withStyles(styles), withTheme())(Text);

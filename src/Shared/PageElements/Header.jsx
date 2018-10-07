@@ -16,8 +16,8 @@ class Header extends PureComponent {
       <Fragment>
         <Typography variant="headline" className={classes.header}>{children}</Typography>
         {
-          showDivider &&
-          <Divider className={classes.headerDivider} />
+          showDivider
+          && <Divider className={classes.headerDivider} />
         }
       </Fragment>
     );
@@ -27,8 +27,8 @@ class Header extends PureComponent {
 Header.defaultProps = {
   showDivider: true,
 };
- Header.propTypes = {
-  showDivider: PropTypes.bool.isRequired,
+Header.propTypes = {
+  showDivider: PropTypes.bool,
 };
 
 export default compose(withStyles(styles), withTheme())(Header);
