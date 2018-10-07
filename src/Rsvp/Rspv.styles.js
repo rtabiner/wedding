@@ -25,13 +25,13 @@ const styles = theme => ({
     width: '100%',
   },
   textAreaField: {
-    color: '#6a6f6a',
+    color: '#5b5f5b',
     width: '100%',
     height: 100,
     fontSize: 15,
     fontFamily: 'Poiret One',
     padding: 10,
-    border: '1px #6a6f6a solid',
+    border: '1px #5b5f5b solid',
   },
   checkboxRoot: {
     color: '#94b8af',
@@ -47,12 +47,12 @@ const styles = theme => ({
     textAlign: 'right',
   },
   button: {
-    color: '#6a6f6a !important',
+    color: '#5b5f5b !important',
     borderColor: '#94b8af',
   },
   disabledButton: {
-    color: '#6a6f6a !important',
-    borderColor: '#6a6f6a',
+    color: '#5b5f5b !important',
+    borderColor: '#5b5f5b',
     cursor: 'not-allowed !important',
     pointerEvents: 'all !important',
   },

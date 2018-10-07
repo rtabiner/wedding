@@ -9,7 +9,7 @@
 .App-header {
   height: 70px;
   padding: 20px 10px 10px 10px;
-  color: #6a6f6a;
+  color: #5b5f5b;
   display: flex;
   justify-content: center;
   margin: 0 -10px 0 -10px;
@@ -28,13 +28,13 @@
   flex-direction: row;
   align-items: center;}
 
-.app-content {
-  max-width: 960px;
-  margin: 20px auto 0px auto;
-  padding: 40px;
-  border: 10px solid #c3d7d2;
-  background-color: #fff;
-}
+  .app-content {
+    max-width: 960px;
+    margin: 20px auto 0px auto;
+    padding: 40px;
+    border: 10px solid #c3d7d2;
+    background-color: #fff;
+  }
 
 img {
   max-width: 100%;
@@ -44,3 +44,12 @@ p {
   text-align: justify;
 }
 
+@media only screen and (max-width: 840px) {
+  .app-content {
+    max-width: 960px;
+    margin: 20px auto 0px auto;
+    padding: 20px;
+    border: 7px solid #c3d7d2;
+    background-color: #fff;
+  }
+}

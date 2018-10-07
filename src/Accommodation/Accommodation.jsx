@@ -31,14 +31,14 @@ class Accommodation extends PureComponent {
           <Text marginBottom={20}>
             If you are planning on staying elsewhere, or are looking to extend
             your trip, feel free to
-{" "}
+            {' '}
             <a href="mailto:rob@tabiner.net">get in touch</a>
-{' '}
-and Áine can
+            {' '}
+            and Áine can
             provide some tips on the local area and places to stay!
-</Text>
+          </Text>
           <Grid container spacing={24}>
-            <Grid item md={4} sm={12}>
+            <Grid item md={4} sm={12} xs={12}>
               <div className={classes.root}>
                 <Typography className={classes.cardContent}>
                   <span className={classes.hotelName}>Castle Durrow</span>
@@ -53,7 +53,7 @@ and Áine can
                 </Typography>
               </div>
             </Grid>
-            <Grid item md={4} sm={12}>
+            <Grid item md={4} sm={12} xs={12}>
               <div className={classes.root}>
                 <Typography className={classes.cardContent}>
                   <span className={classes.hotelName}>Castle Arms Hotel</span>
@@ -68,7 +68,7 @@ and Áine can
                 </Typography>
               </div>
             </Grid>
-            <Grid item md={4} sm={12}>
+            <Grid item md={4} sm={12} xs={12}>
               <div className={classes.root}>
                 <Typography className={classes.cardContent}>
                   <span className={classes.hotelName}>Castle View B&#38;B</span>

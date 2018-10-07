@@ -10,7 +10,7 @@ const styles = theme => ({
   cardContent: {
     marginTop: 20,
     textAlign: 'center',
-    color: '#6a6f6a',
+    color: '#5b5f5b',
   },
   hotelName: {
     fontWeight: 'bold',

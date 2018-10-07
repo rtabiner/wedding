@@ -9,13 +9,13 @@ const styles = theme => ({
     margin: '0 auto',
   },
   tabLabel: {
-    fontSize: 18,
+    fontSize: 19,
     textTransform: 'none',
-    color: '#6a6f6a',
+    color: '#5b5f5b',
   },
   activeTabLabel: {
-    color: '#94b8af',
-    fontSize: 18,
+    color: '#779a91',
+    fontSize: 19,
     textTransform: 'none',
   },
 });
