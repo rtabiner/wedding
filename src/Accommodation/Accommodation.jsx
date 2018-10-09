@@ -23,7 +23,7 @@ class Accommodation extends PureComponent {
             Unfortunately due to the size of our wedding party, Castle Durrow is
             unable to accommodate everyone on the night of our wedding. We have
             set aside a number of rooms for our guests in the Castle Arms Hotel
-            and Durrow House B+B. Both are less than a five minute walk from the
+            and Durrow House B&#38;B. Both are less than a five minute walk from the
             venue. Rooms are held until 24th January. To book a room please use
             the contact details below and let them know that you belong to our
             wedding party.
@@ -63,7 +63,7 @@ class Accommodation extends PureComponent {
                   Co. Laois
                   <br />
                   <span className={classes.hotelPhone}>
-                    +353 0(57) 87 36117
+                    +353 (0)57 87 36117
                   </span>
                 </Typography>
               </div>
@@ -84,6 +84,7 @@ class Accommodation extends PureComponent {
               </div>
             </Grid>
           </Grid>
+          <br />
         </div>
       </Fade>
     );

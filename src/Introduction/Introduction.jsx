@@ -83,7 +83,7 @@ class Introduction extends PureComponent {
             <Text marginBottom={10}>
               We&apos;re super excited to welcome you to our wedding in
               Áine&apos;s home town, Kilkenny. Located in Ireland&apos;s
-              &apos;sunny&apos; south east, the &apos;Marble City&apos; is a
+              sunny south east, the &apos;Marble City&apos; is a
               great spot to spend a few days soaking up Irish culture.
             </Text>
             <Text marginBottom={10}>
@@ -130,7 +130,7 @@ class Introduction extends PureComponent {
                 Cheers,
                 <Text marginBottom={0}>
                   Whoooooo we are married (hopefully). The reception begins at
-                  3pm at Catle Durrow, a place that is very special to us both!
+                  3pm at Castle Durrow, a place that is very special to us both!
                   At this point you will have earned your pint of Guinness -
                   enjoy!
                 </Text>,
