@@ -9,6 +9,8 @@ import TravelMode from './TravelMode';
 import HeadedSection from '../Shared/HeadedSection';
 import Header from '../Shared/PageElements/Header';
 import Text from '../Shared/PageElements/Text';
+import GallerySegment from '../Shared/Photos/GallerySegment';
+import { introPhotoSet } from '../Shared/Photos/Photos';
 
 class TravelAndAccommodation extends PureComponent {
   render() {
@@ -158,6 +160,7 @@ we will be putting on transport to and from
               </Text>
             </div>
           </HeadedSection>
+          <GallerySegment photoSet={introPhotoSet} />
         </div>
       </Fade>
     );
