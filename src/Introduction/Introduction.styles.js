@@ -18,7 +18,10 @@ const styles = theme => ({
   scheduleIcon: {
     maxWidth: 50,
   },
-  locationWrapper: {
+  locationWrapperMd: {
+    textAlign: 'center',
+  },
+  locationWrapperSm: {
     textAlign: 'left',
   },
   winkFace: {

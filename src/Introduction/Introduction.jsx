@@ -6,6 +6,7 @@ import {
   Fade,
   Divider,
   Grid,
+  Hidden,
 } from '@material-ui/core';
 import PropTypes from 'prop-types';
 import styles from './Introduction.styles';
@@ -34,10 +35,21 @@ class Introduction extends PureComponent {
       <Fragment>
         {this.dividerLine()}
         <Grid item xs={12} sm={12} md={2}>
-          <p className={classes.scheduleTime}>{time}</p>
+          <div className={classes.scheduleTime}>
+            {time}
+          </div>
         </Grid>
-        <Grid item xs={12} sm={12} md={2} className={classes.locationWrapper}>
-          <img alt="icon" className={classes.scheduleIcon} src={location} />
+        <Grid item xs={12} sm={12} md={2}>
+          <Hidden smDown>
+            <div className={classes.locationWrapperMd}>
+              <img alt="icon" className={classes.scheduleIcon} src={location} />
+            </div>
+          </Hidden>
+          <Hidden mdUp>
+            <div className={classes.locationWrapperSm}>
+              <img alt="icon" className={classes.scheduleIcon} src={location} />
+            </div>
+          </Hidden>
         </Grid>
         <Grid item xs={12} sm={12} md={8}>
           {summary}
@@ -82,7 +94,17 @@ class Introduction extends PureComponent {
             <Header showDivider={false}>Schedule</Header>
             <Grid container spacing={24}>
               {this.scheduleBlock(
-                '1pm',
+                <p className={classes.scheduleTime}>
+                  1pm @
+                  {' '}
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://goo.gl/maps/y8eXuZCwmT82"
+                  >
+                    Kilkenny
+                  </a>
+                </p>,
                 Couple,
                 <Text marginBottom={0}>
                   Please join us for our Wedding Ceremony at St. Canice&apos;s
@@ -95,7 +117,17 @@ class Introduction extends PureComponent {
                 </Text>,
               )}
               {this.scheduleBlock(
-                '3pm',
+                <p className={classes.scheduleTime}>
+                3pm @
+                  {' '}
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://goo.gl/maps/nHEVm6Gk3PE2"
+                  >
+                  Durrow
+                  </a>
+                </p>,
                 Cheers,
                 <Text marginBottom={0}>
                   Whoooooo we are married (hopefully). The reception begins at
@@ -105,12 +137,12 @@ class Introduction extends PureComponent {
                 </Text>,
               )}
               {this.scheduleBlock(
-                '9pm',
+                <p className={classes.scheduleTime}>9pm</p>,
                 Dancer,
                 <Text marginBottom={0}>Time to show us your best moves.</Text>,
               )}
               {this.scheduleBlock(
-                '2am',
+                <p className={classes.scheduleTime}>2am</p>,
                 Sleep,
                 <Text marginBottom={0}>
                   Unfortunately, all good things must come to an end (unless

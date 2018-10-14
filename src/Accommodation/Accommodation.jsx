@@ -48,7 +48,7 @@ class Accommodation extends PureComponent {
                   Co. Laois
                   <br />
                   <span className={classes.hotelPhone}>
-                    +353 (0)57 873 6555
+                    <a href="tel:+353 (0)57 873 6555">+353 (0)57 873 6555</a>
                   </span>
                 </Typography>
               </div>
@@ -63,7 +63,7 @@ class Accommodation extends PureComponent {
                   Co. Laois
                   <br />
                   <span className={classes.hotelPhone}>
-                    +353 (0)57 87 36117
+                    <a href="tel:+353 (0)57 87 36117">+353 (0)57 87 36117</a>
                   </span>
                 </Typography>
               </div>
@@ -78,7 +78,7 @@ class Accommodation extends PureComponent {
                   Co. Laois
                   <br />
                   <span className={classes.hotelPhone}>
-                    +353 (0)57 87 36544
+                    <a href="tel:+353 (0)57 87 36544">+353 (0)57 87 36544</a>
                   </span>
                 </Typography>
               </div>
