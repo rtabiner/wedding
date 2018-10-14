@@ -28,62 +28,164 @@ class Accommodation extends PureComponent {
             the contact details below and let them know that you belong to our
             wedding party.
           </Text>
-          <Text marginBottom={20}>
-            If you are planning on staying elsewhere, or are looking to extend
-            your trip, feel free to
-            {' '}
-            <a href="mailto:rob@tabiner.net">get in touch</a>
-            {' '}
-            and Áine can
-            provide some tips on the local area and places to stay!
-          </Text>
-          <Grid container spacing={24}>
-            <Grid item md={4} sm={12} xs={12}>
-              <div className={classes.root}>
-                <Typography className={classes.cardContent}>
-                  <span className={classes.hotelName}>Castle Durrow</span>
-                  <br />
+          <div className={classes.accomSection}>
+            <Header>Durrow</Header>
+            <Text>
+              Durrow is a small village with a few pubs blaaaha..
+            </Text>
+            <Grid container spacing={24}>
+              <Grid item md={4} sm={12} xs={12}>
+                <div className={classes.root}>
+                  <Typography className={classes.cardContent}>
+                    <a
+                      href="https://goo.gl/maps/EQvFY9RkUAN2"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={classes.hotelName}
+                    >
+                  Castle Durrow
+                    </a>
+                    <br />
                   Durrow
-                  <br />
+                    <br />
                   Co. Laois
-                  <br />
-                  <span className={classes.hotelPhone}>
-                    <a href="tel:+353 (0)57 873 6555">+353 (0)57 873 6555</a>
-                  </span>
-                </Typography>
-              </div>
-            </Grid>
-            <Grid item md={4} sm={12} xs={12}>
-              <div className={classes.root}>
-                <Typography className={classes.cardContent}>
-                  <span className={classes.hotelName}>Castle Arms Hotel</span>
-                  <br />
+                    <br />
+                    <span className={classes.hotelPhone}>
+                      <a href="tel:+353 (0)57 8736555">+353 (0)57 8736555</a>
+                    </span>
+                  </Typography>
+                </div>
+              </Grid>
+              <Grid item md={4} sm={12} xs={12}>
+                <div className={classes.root}>
+                  <Typography className={classes.cardContent}>
+                    <a
+                      href="https://goo.gl/maps/BHQidjzCs9P2"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={classes.hotelName}
+                    >
+                  Castle Arms Hotel
+                    </a>
+                    <br />
                   Durrow
-                  <br />
+                    <br />
                   Co. Laois
-                  <br />
-                  <span className={classes.hotelPhone}>
-                    <a href="tel:+353 (0)57 87 36117">+353 (0)57 87 36117</a>
-                  </span>
-                </Typography>
-              </div>
-            </Grid>
-            <Grid item md={4} sm={12} xs={12}>
-              <div className={classes.root}>
-                <Typography className={classes.cardContent}>
-                  <span className={classes.hotelName}>Castle View B&#38;B</span>
-                  <br />
+                    <br />
+                    <span className={classes.hotelPhone}>
+                      <a href="tel:+353 (0)57 8736117">+353 (0)57 8736117</a>
+                    </span>
+                  </Typography>
+                </div>
+              </Grid>
+              <Grid item md={4} sm={12} xs={12}>
+                <div className={classes.root}>
+                  <Typography className={classes.cardContent}>
+                    <a
+                      href="https://goo.gl/maps/sHnhLndgLbx"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={classes.hotelName}
+                    >
+                  Durrow House B&#38;B
+                    </a>
+                    <br />
                   Durrow
-                  <br />
+                    <br />
                   Co. Laois
-                  <br />
-                  <span className={classes.hotelPhone}>
-                    <a href="tel:+353 (0)57 87 36544">+353 (0)57 87 36544</a>
-                  </span>
-                </Typography>
-              </div>
+                    <br />
+                    <span className={classes.hotelPhone}>
+                      <a href="tel:+353 (0)57 8736544">+353 (0)57 8736544</a>
+                    </span>
+                  </Typography>
+                </div>
+              </Grid>
             </Grid>
-          </Grid>
+          </div>
+          <div className={classes.accomSection}>
+            <Header>Kilkenny</Header>
+            <Text>
+              Kilkenny is a vibrant small city, and has a lot going on..
+            </Text>
+            <Grid container spacing={24}>
+              <Grid item md={4} sm={12} xs={12}>
+                <div className={classes.root}>
+                  <Typography className={classes.cardContent}>
+                    <a
+                      href="https://goo.gl/maps/uhRpRaQTTJT2"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={classes.hotelName}
+                    >
+                  Newpark Hotel
+                    </a>
+                    <br />
+                  Kilkenny
+                    <br />
+                  Co. Kilkenny
+                    <br />
+                    <span className={classes.hotelPhone}>
+                      <a href="tel:+353 (0)56 7760500">+353 (0)56 7760500</a>
+                    </span>
+                  </Typography>
+                </div>
+              </Grid>
+              <Grid item md={4} sm={12} xs={12}>
+                <div className={classes.root}>
+                  <Typography className={classes.cardContent}>
+                    <a
+                      href="https://goo.gl/maps/62ZA2GF3wiN2"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={classes.hotelName}
+                    >
+                  Hibernian Hotel
+                    </a>
+                    <br />
+                    Kilkenny
+                    <br />
+                  Co. Kilkenny
+                    <br />
+                    <span className={classes.hotelPhone}>
+                      <a href="tel:+353 (0)56 7771888">+353 (0)56 7771888</a>
+                    </span>
+                  </Typography>
+                </div>
+              </Grid>
+              <Grid item md={4} sm={12} xs={12}>
+                <div className={classes.root}>
+                  <Typography className={classes.cardContent}>
+                    <a
+                      href="https://goo.gl/maps/CHaUsCqzyqm"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={classes.hotelName}
+                    >
+                  Kilkenny House Hotel
+                    </a>
+                    <br />
+                    Kilkenny
+                    <br />
+                  Co. Kilkenny
+                    <br />
+                    <span className={classes.hotelPhone}>
+                      <a href="tel:+353 (0)56 7770711">+353 (0)56 7770711</a>
+                    </span>
+                  </Typography>
+                </div>
+              </Grid>
+            </Grid>
+            <br />
+            <br />
+            <Text marginBottom={20}>
+            If you are planning on staying elsewhere, or need more information
+            on anything at all,
+              {' '}
+              <a href="mailto:aineandrob@tabiner.net">get in touch</a>
+              {' '}
+            and Áine will try her best to help answer any questions!
+            </Text>
+          </div>
           <br />
         </div>
       </Fade>

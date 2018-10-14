@@ -22,6 +22,8 @@ import * as Yup from 'yup';
 import styles from './Rspv.styles';
 import Header from '../Shared/PageElements/Header';
 import Text from '../Shared/PageElements/Text';
+import GallerySegment from '../Shared/Photos/GallerySegment';
+import { introPhotoSet } from '../Shared/Photos/Photos';
 
 class Rsvp extends PureComponent {
   constructor(props) {
@@ -81,11 +83,7 @@ class Rsvp extends PureComponent {
               { !emailSuccess
             && (
             <div className={classes.formSuccess}>
-              <img
-                alt="thanks"
-                className={classes.submitImage}
-                src="https://lh3.googleusercontent.com/NwtCqWd9hHXHRMeZ5BS-e7LOUGrEHtA63dohngoQ2IMrjH-icqJjGbbOL-2lnr7iladY9eAL6d45yi4ZRfqRE47IbCg1fDPExDSFIje_uFpI4TxyzG6L7alGbclDd9aLTeUa4gIVaGpZh7O10fDExXCF09zUlhxXwIN72XWalwcdqngFN1o9TObPduA1EqtW84oTncTeZQp5vMnnfyBDIH5l5j6vYBZ0eW3VWJTMs_dVgFRMrSl3mO4-Iufk9500iU-SWPvCj8g2Srx6YFCud93rsIDPBpaa7FEFiYIYIzAlpSvKB1R93yNSFly40a7rZHbNT-LuAWeuwDw8Z3i9VsgOe--3Z1L47p843t0_YS0xuOOWcy3_fz3YBWw4t-3DryYqsiNPEVKCJR2rEcd1BGzUGSJOjhe2Ml_SgAJLJBHVv4jc1LyD611m4AhEcbN0Y347emj9OuYGpfl2c3vkrOCq7NKSRcWvhVc4sCqrnDsaeZrQKQsqC9Bq5vJPoC1RUu_SHFBeMK6GoIrA0FgDbbTfSjra3kyQ_u3y2NpKmeIlVqMO57xZPAsM_RGS3861TdTOnHVuBNn8aksFnFO1mKNTPIzkEPynhBcCBBhns62BeCyRToZ5ZRUbxOP8SJCegSaRTTuD16bGqbWQUGiCZ-LwfZcqwwPQv51vuHF00y0DmoNPlKgD7pKd=w960-h1280-no"
-              />
+              <GallerySegment photoSet={introPhotoSet} />
               <br />
               <br />
               <h3>Oh dear.</h3>
@@ -100,11 +98,7 @@ class Rsvp extends PureComponent {
               { emailSuccess
             && (
             <div className={classes.formSuccess}>
-              <img
-                alt="thanks"
-                className={classes.submitImage}
-                src="https://lh3.googleusercontent.com/Fxwk-q4loq75yj-fSEujyszJt1O0zmyolnEqxOUPYfbOZ4tyvH3oH68S7R-Dvh47zGu98ZjvolFvRyVPr7tycN3zXB6FYZr91HSBlqqWCpPtWP8sUjGXW73hBykAvpIVxJ2djoG6v0sBwrl8_yiGVxogOHQQZ3E5dR4RIB2BAtxiC697Pl0nkednvlkMPNB06hdH4jAhWNR8Fl_uouYOslDqU4fNSo6rIbIXZ-5AGrjW5raqBFm6jQvWmgnPk4MVEE81KuhUSIjGWTst7MT-ICk7lPKkBP_HePTeuyiIAbEsyRBM4VtTJ_4PjUeMyFRjy8EKBZuNSnwKmvgIjVK3uSHfF5TmJnOrafa1aGGuoPIZoM3fQav8RENq-iuMg6PADWHNf2H0YFjneQdzA2ZNvUvgTDE9LJa2Yt6ByfH9eR2o0qqtoqlSSccbmIC5Vf3Np_fyR9JSG2BYXvA-YMV0z2tP3wPqZzqgZr7tP2Xtytg2zlfqJwbya1qUwt44s9f1fy5aIUGE-S_veQFa2jVzkaKrBLg1nIFq0SUtmjY5I0-GMb89k4pKyz0RBouXVKHu1ffOw0v8hEip04lP6QiM2abQFfRe-fme5eLtFs-CsBwKz_9CmQxjxIppi-DUpE_-J_mO7JtdSJZRdN_0XSwZUG0-7SBA2AChToTpuxBJgBBkZM3FQN3RpFBc=w1192-h1446-no"
-              />
+              <GallerySegment photoSet={introPhotoSet} />
               <br />
               <br />
               <h3>Thanks for letting us know.</h3>

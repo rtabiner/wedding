@@ -27,6 +27,9 @@ const styles = theme => ({
   winkFace: {
     maxWidth: 13,
   },
+  gifts: {
+
+  },
 });
 
 export default styles;

@@ -29,6 +29,9 @@ const styles = theme => ({
     marginTop: 10,
     marginBottom: 10,
   },
+  accomSection: {
+    marginTop: 50,
+  },
 });
 
 export default styles;

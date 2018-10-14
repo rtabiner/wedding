@@ -68,9 +68,9 @@ class Introduction extends PureComponent {
             <Header>Welcome</Header>
             <Text marginBottom={10}>
               We&apos;re super excited to welcome you to our wedding in
-              Áine&apos;s home town, Kilkenny. Located in Ireland&apos;s
-              sunny south east, the &apos;Marble City&apos; is a
-              great spot to spend a few days soaking up Irish culture.
+              Áine&apos;s home town, Kilkenny on the 24th August 2019. Located
+              in Ireland&apos;s sunny south east, the &apos;Marble City&apos;
+              is a great spot to spend a few days soaking up Irish culture.
             </Text>
             <Text marginBottom={10}>
               After the wedding ceremony in Kilkenny, we will head to Durrow, to
@@ -80,9 +80,10 @@ class Introduction extends PureComponent {
             <Text marginBottom={10}>
               On these pages, you can find details of the wedding, as well as
               details on the local area. We&apos;re also happy to help answer
-              any further questions over email by contacting us at:&nbsp;
-              <a href="mailto:rob@tabiner.net">rob@tabiner.net</a>
-.
+              any further questions over email by contacting us
+              {' '}
+              <a href="mailto:aineandrob@tabiner.net">via email</a>
+              .
             </Text>
             <Text>
               We can&apos;t wait to welcome you to this lovely part of the world to
@@ -154,6 +155,15 @@ class Introduction extends PureComponent {
               )}
               {this.dividerLine()}
             </Grid>
+          </div>
+          <div className={classes.gifts}>
+            <Header>Gifts</Header>
+            <Text>
+              The most important gift that anyone could get us would be to
+              join us on our special day. However, for those of you who
+              insist, any contribution, no matter how big or small to help
+              towards the next chapter of our lives would be greatly appreciated.
+            </Text>
           </div>
         </div>
       </Fade>

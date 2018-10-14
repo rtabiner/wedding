@@ -32,7 +32,7 @@ class Navigation extends PureComponent {
                   : classes.tabLabel
               }
             >
-              The Day
+              The Plan
             </span>
           </Link>
           &nbsp; &middot; &nbsp;
