@@ -27,7 +27,7 @@ class TravelMode extends PureComponent {
   render() {
     const { classes, transportMode, cardText } = this.props;
     return (
-      <Link to={transportMode} spy smooth offset={20} duration={700} className="plain-link">
+      <Link to={transportMode} spy smooth offset={0} duration={700} className="plain-link">
         <div className={classes.root}>
           {this.getTransportIcon(transportMode)}
           <Typography className={classes.cardContent}>

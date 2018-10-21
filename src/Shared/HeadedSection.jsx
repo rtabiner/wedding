@@ -17,7 +17,6 @@ class HeadedSection extends PureComponent {
     } = this.props;
     return (
       <Element name={anchor} className={classes.section}>
-        <Divider className={classes.divider} />
         <SubHeader>{header}</SubHeader>
         {children}
       </Element>

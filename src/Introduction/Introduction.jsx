@@ -11,6 +11,7 @@ import {
 import PropTypes from 'prop-types';
 import styles from './Introduction.styles';
 import Header from '../Shared/PageElements/Header';
+import SubHeader from '../Shared/PageElements/SubHeader';
 import Text from '../Shared/PageElements/Text';
 import Sleep from '../Images/slumber.svg';
 import Couple from '../Images/wedding-couple.svg';
@@ -32,11 +33,11 @@ class Introduction extends PureComponent {
     );
   }
 
-  scheduleBlock(time, location, summary) {
+  scheduleBlock(time, location, summary, hideDivider) {
     const { classes } = this.props;
     return (
       <Fragment>
-        {this.dividerLine()}
+        {!hideDivider && this.dividerLine()}
         <Grid item xs={12} sm={12} md={2}>
           <div className={classes.scheduleTime}>
             {time}
@@ -95,8 +96,8 @@ class Introduction extends PureComponent {
           </div>
           <GallerySegment photoSet={introPhotoSet} />
           <div className={classes.schedule}>
-            <Header>Schedule</Header>
-            <p className={classes.date}>Saturday 24th August 2019</p>
+            <Header showDivider={false}>Schedule</Header>
+            <SubHeader>Saturday 24th August 2019</SubHeader>
             <Grid container spacing={24}>
               {this.scheduleBlock(
                 <p className={classes.scheduleTime}>
@@ -120,6 +121,7 @@ class Introduction extends PureComponent {
                   12 (please let us know on the RSVP if you would like to take
                   advantage of this).
                 </Text>,
+                true,
               )}
               {this.scheduleBlock(
                 <p className={classes.scheduleTime}>
@@ -149,7 +151,7 @@ class Introduction extends PureComponent {
               {this.scheduleBlock(
                 <p className={classes.scheduleTime}>2am</p>,
                 Sleep,
-                <Text marginBottom={20}>
+                <Text marginBottom={50}>
                   Unfortunately, all good things must come to an end (unless
                   you&apos;re heading to the residents bar
                   {' '}
@@ -157,9 +159,8 @@ class Introduction extends PureComponent {
                   ).
                 </Text>,
               )}
-              {this.dividerLine()}
             </Grid>
-            <p className={`${classes.date} ${classes.nextDay}`}>Sunday 25th August 2019</p>
+            <SubHeader>Sunday 25th August 2019</SubHeader>
             <Grid container spacing={24}>
               {this.scheduleBlock(
                 <p className={classes.scheduleTime}>
@@ -179,6 +180,7 @@ class Introduction extends PureComponent {
                   XXX from 6pm. It will be great to see you and catch
                   up everything from the day before over several pints of Guinness.
                 </Text>,
+                true,
               )}
               {this.dividerLine()}
             </Grid>

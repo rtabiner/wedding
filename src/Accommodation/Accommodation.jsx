@@ -10,6 +10,7 @@ import {
 import PropTypes from 'prop-types';
 import styles from './Accommodation.styles';
 import Header from '../Shared/PageElements/Header';
+import SubHeader from '../Shared/PageElements/SubHeader';
 import Text from '../Shared/PageElements/Text';
 
 class Accommodation extends PureComponent {
@@ -29,7 +30,7 @@ class Accommodation extends PureComponent {
             wedding party.
           </Text>
           <div className={classes.accomSection}>
-            <Header>Durrow</Header>
+            <SubHeader>Durrow</SubHeader>
             <Text>
               Durrow is a small village with a few pubs blaaaha..
             </Text>
@@ -103,7 +104,7 @@ class Accommodation extends PureComponent {
             </Grid>
           </div>
           <div className={classes.accomSection}>
-            <Header>Kilkenny</Header>
+            <SubHeader>Kilkenny</SubHeader>
             <Text>
               Kilkenny is a vibrant small city, and has a lot going on..
             </Text>
