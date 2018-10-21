@@ -16,9 +16,12 @@ import Sleep from '../Images/slumber.svg';
 import Couple from '../Images/wedding-couple.svg';
 import Cheers from '../Images/cheers.svg';
 import Wink from '../Images/wink-face-square.svg';
+import Beer from '../Images/beer.svg';
 import Dancer from '../Images/dancer-with-music.svg';
 import { introPhotoSet } from '../Shared/Photos/Photos';
 import GallerySegment from '../Shared/Photos/GallerySegment';
+import PleaseNote from '../Shared/PleaseNote/PleaseNote';
+
 /* eslint-disable class-methods-use-this */
 class Introduction extends PureComponent {
   dividerLine() {
@@ -146,7 +149,7 @@ class Introduction extends PureComponent {
               {this.scheduleBlock(
                 <p className={classes.scheduleTime}>2am</p>,
                 Sleep,
-                <Text marginBottom={0}>
+                <Text marginBottom={20}>
                   Unfortunately, all good things must come to an end (unless
                   you&apos;re heading to the residents bar
                   {' '}
@@ -170,7 +173,7 @@ class Introduction extends PureComponent {
                     Kilkenny
                   </a>
                 </p>,
-                Couple,
+                Beer,
                 <Text marginBottom={0}>
                   For those of you making a full weekend of it, we will be in the
                   XXX from 6pm. It will be great to see you and catch
@@ -181,13 +184,14 @@ class Introduction extends PureComponent {
             </Grid>
           </div>
           <div className={classes.gifts}>
-            <Header>Gifts</Header>
-            <Text>
-              The most important gift for us is your company on our special
-              day. However, for those of you who
-              insist, a small contribution towards our honeymoon would be
-              greatly received.
-            </Text>
+            <PleaseNote header="Gifts">
+              <span>
+                The most important gift for us is your company on our special
+                day. However, for those of you who
+                insist, a small contribution towards our honeymoon would be
+                greatly received.
+              </span>
+            </PleaseNote>
           </div>
         </div>
       </Fade>

@@ -24,6 +24,7 @@ import Header from '../Shared/PageElements/Header';
 import Text from '../Shared/PageElements/Text';
 import GallerySegment from '../Shared/Photos/GallerySegment';
 import { introPhotoSet } from '../Shared/Photos/Photos';
+import PleaseNote from '../Shared/PleaseNote/PleaseNote';
 
 class Rsvp extends PureComponent {
   constructor(props) {
@@ -127,16 +128,14 @@ class Rsvp extends PureComponent {
                 Please use the form below to let us know if you are able to
                 celebrate our special day with us.
               </Text>
-              <div className={classes.pleaseNote}>
-                <Text marginBottom={0}>
-                  <b>Please note:</b>
-                  {' '}
+              <PleaseNote>
+                <span>
                   we would love to give all our guests the
                   opportunity to let their hair down and have a good time
                   without having to worry about little eyes and ears so we
                   politely request no children other than immediate family.
-                </Text>
-              </div>
+                </span>
+              </PleaseNote>
               <br />
               <Formik
                 initialValues={{

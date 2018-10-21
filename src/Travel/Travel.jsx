@@ -9,6 +9,7 @@ import TravelMode from './TravelMode';
 import HeadedSection from '../Shared/HeadedSection';
 import Header from '../Shared/PageElements/Header';
 import Text from '../Shared/PageElements/Text';
+import PleaseNote from '../Shared/PleaseNote/PleaseNote';
 
 class TravelAndAccommodation extends PureComponent {
   render() {
@@ -22,15 +23,13 @@ class TravelAndAccommodation extends PureComponent {
             Kilkenny and Durrow, as well as some local accomodation. Use the
             buttons to help jump to the relevant sections.
           </Text>
-          <div className={classes.pleaseNote}>
-            <Text marginBottom={0}>
-              <b>Please note:</b>
-              {' '}
-we will be putting on transport to and from
+          <PleaseNote>
+            <span>
+              we will be putting on transport to and from
               the church from Durrow on the day of the wedding. Just let us know
               in the RSVP section if you would like to take advantage of this!
-            </Text>
-          </div>
+            </span>
+          </PleaseNote>
           <div className={classes.transportButtons}>
             <Grid container spacing={24}>
               <Grid item sm={3} xs={12}>
