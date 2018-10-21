@@ -92,7 +92,8 @@ class Introduction extends PureComponent {
           </div>
           <GallerySegment photoSet={introPhotoSet} />
           <div className={classes.schedule}>
-            <Header showDivider={false}>Schedule</Header>
+            <Header>Schedule</Header>
+            <p className={classes.date}>Saturday 24th August 2019</p>
             <Grid container spacing={24}>
               {this.scheduleBlock(
                 <p className={classes.scheduleTime}>
@@ -155,14 +156,37 @@ class Introduction extends PureComponent {
               )}
               {this.dividerLine()}
             </Grid>
+            <p className={`${classes.date} ${classes.nextDay}`}>Sunday 25th August 2019</p>
+            <Grid container spacing={24}>
+              {this.scheduleBlock(
+                <p className={classes.scheduleTime}>
+                  6pm @
+                  {' '}
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://goo.gl/maps/y8eXuZCwmT82"
+                  >
+                    Kilkenny
+                  </a>
+                </p>,
+                Couple,
+                <Text marginBottom={0}>
+                  For those of you making a full weekend of it, we will be in the
+                  XXX from 6pm. It will be great to see you and catch
+                  up everything from the day before over several pints of Guinness.
+                </Text>,
+              )}
+              {this.dividerLine()}
+            </Grid>
           </div>
           <div className={classes.gifts}>
             <Header>Gifts</Header>
             <Text>
-              The most important gift that anyone could get us would be to
-              join us on our special day. However, for those of you who
-              insist, any contribution, no matter how big or small to help
-              towards the next chapter of our lives would be greatly appreciated.
+              The most important gift for us is your company on our special
+              day. However, for those of you who
+              insist, a small contribution towards our honeymoon would be
+              greatly received.
             </Text>
           </div>
         </div>

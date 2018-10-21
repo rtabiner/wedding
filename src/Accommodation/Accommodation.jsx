@@ -156,12 +156,12 @@ class Accommodation extends PureComponent {
                 <div className={classes.root}>
                   <Typography className={classes.cardContent}>
                     <a
-                      href="https://goo.gl/maps/CHaUsCqzyqm"
+                      href="#"
                       target="_blank"
                       rel="noopener noreferrer"
                       className={classes.hotelName}
                     >
-                  Kilkenny House Hotel
+                  Somewhere else
                     </a>
                     <br />
                     Kilkenny
@@ -169,7 +169,7 @@ class Accommodation extends PureComponent {
                   Co. Kilkenny
                     <br />
                     <span className={classes.hotelPhone}>
-                      <a href="tel:+353 (0)56 7770711">+353 (0)56 7770711</a>
+                      <a href="tel:+353 (0)56 num">+353 (0)56 num</a>
                     </span>
                   </Typography>
                 </div>

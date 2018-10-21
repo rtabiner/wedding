@@ -30,6 +30,17 @@ const styles = theme => ({
   gifts: {
 
   },
+  date: {
+    fontSize: 22,
+    textAlign: 'left',
+    marginTop: 0,
+    marginBottom: 30,
+    color: '#779a91',
+    fontWeight: 'bold',
+  },
+  nextDay: {
+    marginTop: 30,
+  },
 });
 
 export default styles;
