@@ -29,7 +29,7 @@ const styles = theme => ({
     fontSize: 20,
   },
   hotelCardContent: {
-    paddingTop: 20,
+    paddingTop: 15,
     textAlign: 'center',
     color: '#5b5f5b',
     borderLeft: '1px solid rgba(0, 0, 0, 0.12)',

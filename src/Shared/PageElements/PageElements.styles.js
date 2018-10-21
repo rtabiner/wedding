@@ -5,7 +5,7 @@ const styles = theme => ({
     color: theme.palette.colors.darkGrey,
   },
   subHeader: {
-    fontSize: 25,
+    fontSize: 23,
     paddingTop: 14,
     paddingBottom: 14,
     borderTop: '1px solid rgba(0, 0, 0, 0.12)',
