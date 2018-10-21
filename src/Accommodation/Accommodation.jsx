@@ -13,7 +13,35 @@ import Header from '../Shared/PageElements/Header';
 import SubHeader from '../Shared/PageElements/SubHeader';
 import Text from '../Shared/PageElements/Text';
 
+/* eslint-disable class-methods-use-this */
 class Accommodation extends PureComponent {
+  hotelCard(hotelName, hotelLink, city, county, phone) {
+    const { classes } = this.props;
+    return (
+      <Grid item md={4} sm={12} xs={12}>
+        <div className={classes.hotelCardName}>
+          <a
+            href={hotelLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={classes.hotelCardNameLink}
+          >
+            {hotelName}
+          </a>
+        </div>
+        <Typography className={classes.hotelCardContent}>
+          {city}
+          <br />
+          {county}
+          <br />
+          <span className={classes.hotelPhone}>
+            <a href={`tel:${phone}}`}>{phone}</a>
+          </span>
+        </Typography>
+      </Grid>
+    );
+  }
+
   render() {
     const { classes } = this.props;
     return (
@@ -35,72 +63,27 @@ class Accommodation extends PureComponent {
               Durrow is a small village with a few pubs blaaaha..
             </Text>
             <Grid container spacing={24}>
-              <Grid item md={4} sm={12} xs={12}>
-                <div className={classes.root}>
-                  <Typography className={classes.cardContent}>
-                    <a
-                      href="https://goo.gl/maps/EQvFY9RkUAN2"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={classes.hotelName}
-                    >
-                  Castle Durrow
-                    </a>
-                    <br />
-                  Durrow
-                    <br />
-                  Co. Laois
-                    <br />
-                    <span className={classes.hotelPhone}>
-                      <a href="tel:+353 (0)57 8736555">+353 (0)57 8736555</a>
-                    </span>
-                  </Typography>
-                </div>
-              </Grid>
-              <Grid item md={4} sm={12} xs={12}>
-                <div className={classes.root}>
-                  <Typography className={classes.cardContent}>
-                    <a
-                      href="https://goo.gl/maps/BHQidjzCs9P2"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={classes.hotelName}
-                    >
-                  Castle Arms Hotel
-                    </a>
-                    <br />
-                  Durrow
-                    <br />
-                  Co. Laois
-                    <br />
-                    <span className={classes.hotelPhone}>
-                      <a href="tel:+353 (0)57 8736117">+353 (0)57 8736117</a>
-                    </span>
-                  </Typography>
-                </div>
-              </Grid>
-              <Grid item md={4} sm={12} xs={12}>
-                <div className={classes.root}>
-                  <Typography className={classes.cardContent}>
-                    <a
-                      href="https://goo.gl/maps/sHnhLndgLbx"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={classes.hotelName}
-                    >
-                  Durrow House B&#38;B
-                    </a>
-                    <br />
-                  Durrow
-                    <br />
-                  Co. Laois
-                    <br />
-                    <span className={classes.hotelPhone}>
-                      <a href="tel:+353 (0)57 8736544">+353 (0)57 8736544</a>
-                    </span>
-                  </Typography>
-                </div>
-              </Grid>
+              {this.hotelCard(
+                'Castle Durrow',
+                'https://goo.gl/maps/EQvFY9RkUAN2',
+                'Durrow',
+                'Co. Laois',
+                '+353 (0)57 8736555',
+              )}
+              {this.hotelCard(
+                'Castle Arms Hotel',
+                'https://goo.gl/maps/BHQidjzCs9P2',
+                'Durrow',
+                'Co. Laois',
+                '+353 (0)57 8736117',
+              )}
+              {this.hotelCard(
+                'Durrow House B&B',
+                'https://goo.gl/maps/sHnhLndgLbx',
+                'Durrow',
+                'Co. Laois',
+                '+353 (0)57 8736544',
+              )}
             </Grid>
           </div>
           <div className={classes.accomSection}>
@@ -109,72 +92,27 @@ class Accommodation extends PureComponent {
               Kilkenny is a vibrant small city, and has a lot going on..
             </Text>
             <Grid container spacing={24}>
-              <Grid item md={4} sm={12} xs={12}>
-                <div className={classes.root}>
-                  <Typography className={classes.cardContent}>
-                    <a
-                      href="https://goo.gl/maps/uhRpRaQTTJT2"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={classes.hotelName}
-                    >
-                  Newpark Hotel
-                    </a>
-                    <br />
-                  Kilkenny
-                    <br />
-                  Co. Kilkenny
-                    <br />
-                    <span className={classes.hotelPhone}>
-                      <a href="tel:+353 (0)56 7760500">+353 (0)56 7760500</a>
-                    </span>
-                  </Typography>
-                </div>
-              </Grid>
-              <Grid item md={4} sm={12} xs={12}>
-                <div className={classes.root}>
-                  <Typography className={classes.cardContent}>
-                    <a
-                      href="https://goo.gl/maps/62ZA2GF3wiN2"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={classes.hotelName}
-                    >
-                  Hibernian Hotel
-                    </a>
-                    <br />
-                    Kilkenny
-                    <br />
-                  Co. Kilkenny
-                    <br />
-                    <span className={classes.hotelPhone}>
-                      <a href="tel:+353 (0)56 7771888">+353 (0)56 7771888</a>
-                    </span>
-                  </Typography>
-                </div>
-              </Grid>
-              <Grid item md={4} sm={12} xs={12}>
-                <div className={classes.root}>
-                  <Typography className={classes.cardContent}>
-                    <a
-                      href="#"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={classes.hotelName}
-                    >
-                  Somewhere else
-                    </a>
-                    <br />
-                    Kilkenny
-                    <br />
-                  Co. Kilkenny
-                    <br />
-                    <span className={classes.hotelPhone}>
-                      <a href="tel:+353 (0)56 num">+353 (0)56 num</a>
-                    </span>
-                  </Typography>
-                </div>
-              </Grid>
+              {this.hotelCard(
+                'Newpark Hotel',
+                'https://goo.gl/maps/uhRpRaQTTJT2',
+                'Kilkenny',
+                'Co. Kilkenny',
+                '+353 (0)56 7760500',
+              )}
+              {this.hotelCard(
+                'Hibernian Hotel',
+                'https://goo.gl/maps/62ZA2GF3wiN2',
+                'Kilkenny',
+                'Co. Kilkenny',
+                '+353 (0)56 7771888',
+              )}
+              {this.hotelCard(
+                'another',
+                'dfd',
+                'Kilkenny',
+                'Co. Kilkenny',
+                '+353 (0)56 fsdf',
+              )}
             </Grid>
             <br />
             <br />

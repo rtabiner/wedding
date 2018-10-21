@@ -7,11 +7,6 @@ const styles = theme => ({
   textField: {
     width: '100%',
   },
-  cardContent: {
-    marginTop: 20,
-    textAlign: 'center',
-    color: '#5b5f5b',
-  },
   hotelName: {
     fontWeight: 'bold',
     fontSize: 20,
@@ -20,17 +15,26 @@ const styles = theme => ({
   hotelPhone: {
     lineHeight: '50px',
   },
-  root: {
-    background: '#c4d7d21a',
-    minWidth: '100%',
-    border: '1px #94b8af solid',
-    height: '100%',
-    borderRadius: 5,
-    marginTop: 10,
-    marginBottom: 10,
-  },
   accomSection: {
     marginTop: 50,
+  },
+  hotelCardName: {
+    border: '1px solid #779a91',
+    backgroundColor: '#779a91',
+    paddingTop: 10,
+    paddingBottom: 10,
+  },
+  hotelCardNameLink: {
+    color: '#fff !important',
+    fontSize: 20,
+  },
+  hotelCardContent: {
+    paddingTop: 20,
+    textAlign: 'center',
+    color: '#5b5f5b',
+    borderLeft: '1px solid rgba(0, 0, 0, 0.12)',
+    borderRight: '1px solid rgba(0, 0, 0, 0.12)',
+    borderBottom: '1px solid rgba(0, 0, 0, 0.12)',
   },
 });
 
