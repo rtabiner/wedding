@@ -4,7 +4,7 @@ const styles = theme => ({
   },
   schedule: {
     paddingTop: 30,
-    marginBottom: 50,
+    marginBottom: 30,
   },
   scheduleDivider: {
     marginBottom: 50,

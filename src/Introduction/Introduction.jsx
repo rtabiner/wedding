@@ -195,6 +195,7 @@ class Introduction extends PureComponent {
               </span>
             </PleaseNote>
           </div>
+          <br />
         </div>
       </Fade>
     );

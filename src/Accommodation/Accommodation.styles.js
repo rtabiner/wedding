@@ -19,22 +19,21 @@ const styles = theme => ({
     marginTop: 50,
   },
   hotelCardName: {
-    border: '1px solid #779a91',
-    backgroundColor: '#779a91',
+    border: '2px solid #c3d7d2',
+    backgroundColor: '#c4d7d21a',
     paddingTop: 10,
     paddingBottom: 10,
   },
   hotelCardNameLink: {
-    color: '#fff !important',
     fontSize: 20,
   },
   hotelCardContent: {
     paddingTop: 15,
     textAlign: 'center',
     color: '#5b5f5b',
-    borderLeft: '1px solid rgba(0, 0, 0, 0.12)',
-    borderRight: '1px solid rgba(0, 0, 0, 0.12)',
-    borderBottom: '1px solid rgba(0, 0, 0, 0.12)',
+    borderLeft: '2px solid #c3d7d2',
+    borderRight: '2px solid #c3d7d2',
+    borderBottom: '2px solid #c3d7d2',
   },
 });
 
