@@ -22,8 +22,7 @@ import * as Yup from 'yup';
 import styles from './Rspv.styles';
 import Header from '../Shared/PageElements/Header';
 import Text from '../Shared/PageElements/Text';
-import GallerySegment from '../Shared/Photos/GallerySegment';
-import { introPhotoSet } from '../Shared/Photos/Photos';
+import Photo from '../Images/wedding-invitation.svg';
 import PleaseNote from '../Shared/PleaseNote/PleaseNote';
 
 class Rsvp extends PureComponent {
@@ -73,7 +72,6 @@ class Rsvp extends PureComponent {
     const { classes } = this.props;
     const {
       formSubmitted, attending, emailSuccess, emailResponded,
-
     } = this.state;
     return (
       <div>
@@ -84,7 +82,7 @@ class Rsvp extends PureComponent {
               { !emailSuccess
             && (
             <div className={classes.formSuccess}>
-              <GallerySegment photoSet={introPhotoSet} />
+              <img src={Photo} alt="invitation" className={classes.rsvpIcon} />
               <br />
               <br />
               <h3>Oh dear.</h3>
@@ -99,7 +97,7 @@ class Rsvp extends PureComponent {
               { emailSuccess
             && (
             <div className={classes.formSuccess}>
-              <GallerySegment photoSet={introPhotoSet} />
+              <img src={Photo} alt="invitation" className={classes.rsvpIcon} />
               <br />
               <br />
               <h3>Thanks for letting us know.</h3>
@@ -136,6 +134,7 @@ class Rsvp extends PureComponent {
                   politely request no children other than immediate family.
                 </span>
               </PleaseNote>
+              <br />
               <br />
               <Formik
                 initialValues={{

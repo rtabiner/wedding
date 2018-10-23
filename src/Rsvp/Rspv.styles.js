@@ -65,6 +65,9 @@ const styles = theme => ({
   submitImage: {
     maxHeight: 300,
   },
+  rsvpIcon: {
+    maxWidth: 100,
+  },
 });
 
 export default styles;

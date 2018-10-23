@@ -8,10 +8,10 @@ const styles = theme => ({
     fontSize: 23,
     paddingTop: 14,
     paddingBottom: 14,
-    borderTop: '1px solid rgba(0, 0, 0, 0.12)',
-    borderBottom: '1px solid rgba(0, 0, 0, 0.12)',
+    borderTop: '1.5px solid #779a91',
+    borderBottom: '1.5px solid #779a91',
     color: theme.palette.colors.darkGrey,
-    backgroundColor: '#c4d7d21a',
+    // backgroundColor: '#c4d7d21a',
     marginBottom: 20,
   },
   headerDivider: {

@@ -151,7 +151,7 @@ class Introduction extends PureComponent {
               {this.scheduleBlock(
                 <p className={classes.scheduleTime}>2am</p>,
                 Sleep,
-                <Text marginBottom={50}>
+                <Text marginBottom={40}>
                   Unfortunately, all good things must come to an end (unless
                   you&apos;re heading to the residents bar
                   {' '}
