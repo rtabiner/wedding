@@ -78,13 +78,12 @@ class Introduction extends PureComponent {
             </Text>
             <Text marginBottom={10}>
               After the wedding ceremony in Kilkenny, we will head to Durrow, to
-              kick start our married life with our nearest and dearest in this
-              special village.
+              kick start our married life with our nearest and dearest.
             </Text>
             <Text marginBottom={10}>
               On these pages, you can find details of the wedding, as well as
               details on the local area. We&apos;re also happy to help answer
-              any further questions over email by contacting us
+              any further questions by contacting us
               {' '}
               <a href="mailto:aineandrob@tabiner.net">via email</a>
               .
@@ -115,10 +114,10 @@ class Introduction extends PureComponent {
                 <Text marginBottom={0}>
                   Please join us for our Wedding Ceremony at St. Canice&apos;s
                   Church, Kilkenny. St. Canice&apos;s is Áine&apos;s local church. Please
-                  arrive at 12.30pm for a 1pm start, you don&apos;t want to be later
+                  arrive no later than 12.30pm for a 1pm start, you don&apos;t want to be later
                   than the Bride (and Áine is never late)! For those travelling
                   from Durrow, we will provide a bus, which will be leaving at
-                  12 (please let us know on the RSVP if you would like to take
+                  12pm (please let us know on the RSVP if you would like to take
                   advantage of this).
                 </Text>,
                 true,
@@ -169,16 +168,25 @@ class Introduction extends PureComponent {
                   <a
                     target="_blank"
                     rel="noopener noreferrer"
-                    href="https://goo.gl/maps/y8eXuZCwmT82"
+                    href="https://goo.gl/maps/w557jJZf4u82"
                   >
                     Kilkenny
                   </a>
                 </p>,
                 Beer,
                 <Text marginBottom={0}>
-                  For those of you making a full weekend of it, we will be in the
-                  XXX from 6pm. It will be great to see you and catch
-                  up everything from the day before over several pints of Guinness.
+                  For those of you making a full weekend of it, we will be in
+                  {' '}
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://goo.gl/maps/w557jJZf4u82"
+                  >
+                    Langton&apos;s
+                  </a>
+                  {' '}
+                  from 6pm. It will be great to see you and catch
+                  up on the previous day&apos;s shenanigans over several pints of Guinness.
                 </Text>,
                 true,
               )}
