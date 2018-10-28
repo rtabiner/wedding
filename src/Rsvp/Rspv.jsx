@@ -24,7 +24,7 @@ import Header from '../Shared/PageElements/Header';
 import Text from '../Shared/PageElements/Text';
 import Photo from '../Images/wedding-invitation.svg';
 import PleaseNote from '../Shared/PleaseNote/PleaseNote';
-import { introPhotoSet } from '../Shared/Photos/Photos';
+import { rsvpPhotoSet } from '../Shared/Photos/Photos';
 import GallerySegment from '../Shared/Photos/GallerySegment';
 
 class Rsvp extends PureComponent {
@@ -138,7 +138,7 @@ class Rsvp extends PureComponent {
               </PleaseNote>
               <br />
               <br />
-              <GallerySegment photoSet={introPhotoSet} />
+              <GallerySegment photoSet={rsvpPhotoSet} />
               <br />
               <br />
               <Formik
