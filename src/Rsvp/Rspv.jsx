@@ -42,32 +42,32 @@ class Rsvp extends PureComponent {
     const stateThis = this;
     stateThis.setState({ formSubmitted: true });
 
-    // Option 1
-    setTimeout(() => {
-      stateThis.setState({
-        attending: formData.attending,
-        emailSuccess: true,
-        emailResponded: true,
-      });
-    }, 1000);
-    console.log(formData);
-    // End Option 1
-
-    // // Option 2
-    // emailjs.send('mailgun', 'template_SqaqZ51v', formData, 'xxx')
-    //   .then(() => {
-    //     stateThis.setState({
-    //       attending: formData.attending,
-    //       emailSuccess: true,
-    //       emailResponded: true,
-    //     });
-    //   }, () => {
-    //     stateThis.setState({
-    //       attending: formData.attending,
-    //       emailSuccess: false,
-    //       emailResponded: true,
-    //     });
+    // // Option 1
+    // setTimeout(() => {
+    //   stateThis.setState({
+    //     attending: formData.attending,
+    //     emailSuccess: true,
+    //     emailResponded: true,
     //   });
+    // }, 1000);
+    // // console.log(formData);
+    // // End Option 1
+
+    // Option 2
+    emailjs.send('mailgun', 'template_SqaqZ51v', formData, 'xxx')
+      .then(() => {
+        stateThis.setState({
+          attending: formData.attending,
+          emailSuccess: true,
+          emailResponded: true,
+        });
+      }, () => {
+        stateThis.setState({
+          attending: formData.attending,
+          emailSuccess: false,
+          emailResponded: true,
+        });
+      });
   }
 
   render() {
