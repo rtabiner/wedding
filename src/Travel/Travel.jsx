@@ -20,7 +20,7 @@ class TravelAndAccommodation extends PureComponent {
           <Header>Travel</Header>
           <Text>
             Here you can find out more information about getting to and from
-            Kilkenny and Durrow, as well as some local accomodation. Use the
+            Kilkenny and Durrow. Use the
             buttons to help jump to the relevant sections.
           </Text>
           <PleaseNote>
@@ -72,7 +72,7 @@ class TravelAndAccommodation extends PureComponent {
               </Text>
               <Text>
                 St. Canice&apos;s Church has plenty of room for parking, as do
-                all of the recommended places to stay in the accomodation page.
+                all of the recommended places to stay on the accomodation page.
                 The distance between St. Canice&apos;s Church and the reception
                 at Castle Durrow is about a 25 minute drive (26km / 16 miles).
               </Text>
