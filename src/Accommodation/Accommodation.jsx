@@ -60,7 +60,9 @@ class Accommodation extends PureComponent {
           <div className={classes.accomSection}>
             <SubHeader>Durrow</SubHeader>
             <Text>
-              Durrow is a small village with a few pubs blaaaha..
+              Durrow is a quintessential Irish town on the borders between Co. Kilkenny and Co. Laois.
+              If you are staying in Durrow on the Friday night, make sure to take a trip to Bob&apos;s
+              Bar for a top pint and even better craic!
             </Text>
             <Grid container spacing={24}>
               {this.hotelCard(
@@ -89,7 +91,15 @@ class Accommodation extends PureComponent {
           <div className={classes.accomSection}>
             <SubHeader>Kilkenny</SubHeader>
             <Text>
-              Kilkenny is a vibrant small city, and has a lot going on..
+              Kilkenny is one of Ireland&apos;s biggest tourist draws because of it&apos;s
+              medieval architecture and vibrant scene. If you&apos;re planning on extending
+              your trip, we highly recommend a night or two to experience what Kilkenny
+              has to offer. There are plenty of restaurants and more watering holes than
+              you can shake a stick at.
+            </Text>
+            <Text>
+              We are having a some post-wedding drinks in Kilkenny on the Sunday evening
+              (see the schedule for more information).
             </Text>
             <Grid container spacing={24}>
               {this.hotelCard(
@@ -107,11 +117,11 @@ class Accommodation extends PureComponent {
                 '+353 (0)56 7771888',
               )}
               {this.hotelCard(
-                'another',
-                'dfd',
+                'Kilkenny Inn',
+                'https://goo.gl/maps/ZqFjk85CZHy',
                 'Kilkenny',
                 'Co. Kilkenny',
-                '+353 (0)56 fsdf',
+                '+353 (0)56 7761902',
               )}
             </Grid>
             <br />

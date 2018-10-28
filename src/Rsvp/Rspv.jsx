@@ -24,6 +24,8 @@ import Header from '../Shared/PageElements/Header';
 import Text from '../Shared/PageElements/Text';
 import Photo from '../Images/wedding-invitation.svg';
 import PleaseNote from '../Shared/PleaseNote/PleaseNote';
+import { introPhotoSet } from '../Shared/Photos/Photos';
+import GallerySegment from '../Shared/Photos/GallerySegment';
 
 class Rsvp extends PureComponent {
   constructor(props) {
@@ -134,6 +136,9 @@ class Rsvp extends PureComponent {
                   politely request no children other than immediate family.
                 </span>
               </PleaseNote>
+              <br />
+              <br />
+              <GallerySegment photoSet={introPhotoSet} />
               <br />
               <br />
               <Formik
