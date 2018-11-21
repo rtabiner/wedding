@@ -180,9 +180,9 @@ class Introduction extends PureComponent {
                   <a
                     target="_blank"
                     rel="noopener noreferrer"
-                    href="https://goo.gl/maps/w557jJZf4u82"
+                    href="https://goo.gl/maps/ms5MoSCEh942"
                   >
-                    Langton&apos;s
+                    Bridie&apos;s
                   </a>
                   {' '}
                   from 6pm. It will be great to see you and catch
@@ -198,7 +198,7 @@ class Introduction extends PureComponent {
               <span>
                 The most important gift for us is your company on our special
                 day. However, for those of you who
-                insist, a small contribution towards our honeymoon would be
+                insist, a contribution towards our honeymoon would be
                 greatly received.
               </span>
             </PleaseNote>

@@ -8,6 +8,7 @@ import {
   Typography,
 } from '@material-ui/core';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import styles from './Accommodation.styles';
 import Header from '../Shared/PageElements/Header';
 import SubHeader from '../Shared/PageElements/SubHeader';
@@ -98,8 +99,14 @@ class Accommodation extends PureComponent {
               you can shake a stick at.
             </Text>
             <Text>
-              We are having a some post-wedding drinks in Kilkenny on the Sunday evening
-              (see the schedule for more information).
+              We are continuing the celebrations in Kilkenny on the Sunday evening
+              (see the
+              {' '}
+              <Link to="/">
+                  schedule
+              </Link>
+              {' '}
+               for more information).
             </Text>
             <Grid container spacing={24}>
               {this.hotelCard(

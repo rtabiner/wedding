@@ -54,7 +54,7 @@ class Rsvp extends PureComponent {
     // // End Option 1
 
     // Option 2
-    emailjs.send('mailgun', 'template_SqaqZ51v', formData, 'xxx')
+    emailjs.send('mailgun', 'template_SqaqZ51v', formData, 'xx')
       .then(() => {
         stateThis.setState({
           attending: formData.attending,
