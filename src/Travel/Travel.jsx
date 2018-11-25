@@ -66,13 +66,13 @@ class TravelAndAccommodation extends PureComponent {
           <HeadedSection header="Car" anchor="car">
             <div className={classes.transportSection}>
               <Text>
-                Travelling by car is by far the easiset and quickest way to get
+                Travelling by car is by far the easiest and quickest way to get
                 around, and we would certainly recommend driving or hiring a car
                 if this is an option.
               </Text>
               <Text>
                 St. Canice&apos;s Church has plenty of room for parking, as do
-                all of the recommended places to stay on the accomodation page.
+                all of the recommended places to stay on the accommodation page.
                 The distance between St. Canice&apos;s Church and the reception
                 at Castle Durrow is about a 25 minute drive (26km / 16 miles).
               </Text>

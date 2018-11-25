@@ -238,6 +238,7 @@ class Rsvp extends PureComponent {
                           <MenuItem value={1}>One</MenuItem>
                           <MenuItem value={2}>Two</MenuItem>
                           <MenuItem value={3}>Three</MenuItem>
+                          <MenuItem value={4}>Four</MenuItem>
                         </Select>
 
                         <br />
@@ -272,7 +273,7 @@ class Rsvp extends PureComponent {
                               onBlur={handleBlur}
                             />
                           )}
-                          label="Do you have any dietry requirements?"
+                          label="Do you have any dietary requirements?"
                         />
                         <br />
                         <Collapse in={values.hasDietryRequirements}>

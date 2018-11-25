@@ -92,7 +92,7 @@ class Accommodation extends PureComponent {
           <div className={classes.accomSection}>
             <SubHeader>Kilkenny</SubHeader>
             <Text>
-              Kilkenny is one of Ireland&apos;s biggest tourist draws because of it&apos;s
+              Kilkenny is one of Ireland&apos;s biggest tourist draws because of its
               medieval architecture and vibrant scene. If you&apos;re planning on extending
               your trip, we highly recommend a night or two to experience what Kilkenny
               has to offer. There are plenty of restaurants and more watering holes than

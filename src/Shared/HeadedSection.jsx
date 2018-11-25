@@ -5,7 +5,6 @@ import PropTypes from 'prop-types';
 import {
   withStyles,
   withTheme,
-  Divider,
 } from '@material-ui/core';
 import SubHeader from './PageElements/SubHeader';
 import styles from './HeadedSection.styles';
