@@ -278,7 +278,7 @@ class Rsvp extends PureComponent {
                         <br />
                         <Collapse in={values.hasDietryRequirements}>
                           <Text marginBottom={5}>
-                            Please provide any dietry requirements below.
+                            Please provide any dietary requirements below.
                           </Text>
                         </Collapse>
                       </div>
