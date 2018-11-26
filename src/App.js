@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactGA from 'react-ga';
 import './App.css';
 import { Switch, Route } from 'react-router-dom';
 import { Link } from 'react-router-dom';
@@ -30,6 +31,8 @@ const App = () => (
         <Route path="/Credits" component={Credits} />
       </Switch>
 
+      {ReactGA.initialize('UA-129831790-1')}
+      {ReactGA.pageview(window.location.hash)}
     </div>
     <br />
     <Link className="plain-link credits" to="/Credits">Credits</Link>

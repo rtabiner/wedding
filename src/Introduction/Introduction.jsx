@@ -175,7 +175,7 @@ class Introduction extends PureComponent {
                 </p>,
                 Beer,
                 <Text marginBottom={0}>
-                  For those of you making a full weekend of it, we will be in
+                  For those of you making a full weekend of it or taking full advantage of the bank holiday, we will be in
                   {' '}
                   <a
                     target="_blank"
