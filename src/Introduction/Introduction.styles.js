@@ -27,6 +27,9 @@ const styles = theme => ({
   winkFace: {
     maxWidth: 13,
   },
+  rsvpbanner: {
+    marginBottom: 20,
+  },
 });
 
 export default styles;

@@ -70,6 +70,16 @@ class Introduction extends PureComponent {
         <div>
           <div className={classes.intro}>
             <Header>Welcome</Header>
+
+            <div className={classes.rsvpbanner}>
+            <PleaseNote header="RSVP">
+              <span>
+                Please RSVP by Sunday the 30th June...or alternatively, bring
+                your own chair and a packed lunch.
+              </span>
+            </PleaseNote>
+          </div>
+
             <Text marginBottom={10}>
               We&apos;re super excited to welcome you to our wedding in
               Áine&apos;s home town, Kilkenny on the 24th August 2019. Located
@@ -196,10 +206,10 @@ class Introduction extends PureComponent {
           <div className={classes.gifts}>
             <PleaseNote header="Gifts">
               <span>
-                The most important gift for us is your company on our special
-                day. However, for those of you who
-                insist, a contribution towards our honeymoon would be
-                greatly received.
+                The most important gift for us is your company on our special day. However, 
+                for those of you who insist, a contribution towards our honeymoon would be greatly
+                received, and can be made by accessing our honeymoon fund page {' '}
+                <a href='https://prezola.com/wishlists/10207893/' target='_blank'>here</a>.                
               </span>
             </PleaseNote>
           </div>
